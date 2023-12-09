@@ -17,11 +17,10 @@ Is a movie's success etched in box office gold and revenue, or does it reside in
 **The Spectrum of Ratings: A Glimpse into Popularity**
 Dive into the world of ratings, you'll see it's less about the extremes and more like a cozy middle part of the road party. 
 
-![movie_ratings](ada-jekyll/assets/img/movie_ratings.png)
+![movie_ratings](/assets/img/movie_ratings.png)
 
-![votes](ada-jekyll/assets/img/votes.png)
-
--[ ] make the graphs visiually appealing, with some lines shwoing the normal distribution, or make a distinction between the high, average, low ratings
+![votes](/assets/img/votes.png)
+- [ ]make the graphs visiually appealing, with some lines shwoing the normal distribution, or make a distinction between the high, average, low ratings
 
 
 (we can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively). The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
@@ -39,7 +38,7 @@ Tropes are those tried and true clichés that we can spot a mile away. Whether i
 [Histogram of number of roles per actor](ada-jekyll/assets/img/roles_per_actor.png)
 We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
 
--[ ]  draw conclusion from this! or graph or smthg.
+- [ ] draw conclusion from this! or graph or smthg.
 
 It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone. 
 
@@ -47,5 +46,4 @@ It turns out Hollywood's got a "type," and many actors fit right into it. The bi
 
 
 Our dataset containes  "crazy jealous guy", "jerk jock", "dumb blonde" ...
-
--[ ] maybe a network graph of these frequent tropes? 
+- [ ] maybe a network graph of these frequent tropes? 
