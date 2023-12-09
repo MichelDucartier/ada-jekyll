@@ -20,7 +20,7 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
 ![movie_ratings](/assets/img/movie_ratings.png)
 
 ![votes](/assets/img/votes.png)
-- [ ]make the graphs visiually appealing, with some lines shwoing the normal distribution, or make a distinction between the high, average, low ratings
+- [ ] make the graphs visiually appealing, with some lines shwoing the normal distribution, or make a distinction between the high, average, low ratings
 
 
 (we can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively). The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
@@ -35,7 +35,7 @@ However, some actors stick to playing the same characters. We got really intrigu
 ## Tropes ?:  define movie tropes  in a fun way 
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
-[Histogram of number of roles per actor](ada-jekyll/assets/img/roles_per_actor.png)
+![Histogram of number of roles per actor](/assets/img/roles_per_actor.png)
 We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
 
 - [ ] draw conclusion from this! or graph or smthg.
