@@ -11,8 +11,11 @@ In the movie industry, creativity is generally considered to be a key factor in 
 
 ## Unraveling the threads of cinematic success
 
-Is a movie's success etched in box office gold and revenue, or does it reside in the hearts of viewers and the pens of critics? While blockbusters rake in the cash, they represent just a sliver of the film universe. Let's delve into what truly marks a film's success.
-(some plot to show smthg about revenue and blockbusters)
+Is a movie's success etched in box office gold and revenue, or does it reside in the hearts of viewers and the pens of critics? While blockbusters rake in the cash, they represent just a sliver of the film universe.
+
+![Revenue vs Iceland](/assets/img/revenue_vs_iceland.png)
+
+By way of comparison, the annual box office of the entire film industry is equivalent to Iceland's GDP! But why are they so popular? What makes a good movie? Let's delve into what truly marks a film's success!
 
 **The Spectrum of Ratings: A Glimpse into Popularity**
 Dive into the world of ratings, you'll see it's less about the extremes and more like a cozy middle part of the road party. 
@@ -36,6 +39,7 @@ However, some actors stick to playing the same characters. We got really intrigu
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
 ![Histogram of number of roles per actor](/assets/img/roles_per_actor.png)
+
 We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
 
 - [ ] draw conclusion from this! or graph or smthg.
