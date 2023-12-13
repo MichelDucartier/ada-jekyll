@@ -43,10 +43,11 @@ What has influence over this popularity? Is it a riveting storyline, memorable c
 As big movie fans, we love some movies because one of our favourite actors play in them.
 However, some actors stick to playing the same characters. We got really intrigued by this phenomena. Let's study each actor and the characters they play.
 
-## Tropes ?:  define movie tropes  in a fun way 
+## Tropes : Define movie tropes in a fun way 
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
-![Histogram of number of roles per actor](/assets/img/roles_per_actor.png)
+To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas.
+
 
 We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
 
