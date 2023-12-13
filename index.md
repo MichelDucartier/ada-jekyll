@@ -13,7 +13,13 @@ In the movie industry, creativity is generally considered to be a key factor in 
 
 Is a movie's success etched in box office gold and revenue, or does it reside in the hearts of viewers and the pens of critics? While blockbusters rake in the cash, they represent just a sliver of the film universe.
 
-![Revenue vs Iceland](/assets/img/revenue_vs_iceland.png)
+<!-- ![Revenue vs Iceland](/assets/img/revenue_vs_iceland.png) -->
+
+<div class="container">
+<!-- <iframe src="assets/plot/box_office_vs_gdp.html" scrolling="no" frameborder="0" style="position: relative; min_height: 720px,  min_width: 400px">Box office vs Iceland's GDP</iframe> -->
+  <iframe class="responsive-iframe" src="assets/plot/box_office_vs_gdp.html"></iframe>
+</div>
+
 
 By way of comparison, the annual box office of the entire film industry is equivalent to Iceland's GDP! But why are they so popular? What makes a good movie? Let's delve into what truly marks a film's success!
 
