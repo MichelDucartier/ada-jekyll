@@ -46,8 +46,11 @@ However, some actors stick to playing the same characters. We got really intrigu
 ## Tropes : Define movie tropes in a fun way 
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
-To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas.
+To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas. Let's try look at those personas a little bit more closely! To visualize the meaning of different personas, we will use the [word2vec](https://arxiv.org/abs/1301.3781) representations of the most frequent words in a couple of generated tropes. Then, we use TSNE to reduce those high dimensional vectors to 2 dimensions in order to visualize them. Here are our results for a couple of tropes:
 
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/persona_scatter.html"></iframe>
+</div>
 
 We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
 
