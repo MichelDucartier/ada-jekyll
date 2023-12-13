@@ -52,6 +52,10 @@ To find the most recurrent tropes in the movie industry, we use a Latent Dirichl
   <iframe class="responsive-iframe" src="assets/plot/persona_scatter.html"></iframe>
 </div>
 
+We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
+
+
+
 We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
 
 - [ ] draw conclusion from this! or graph or smthg.
