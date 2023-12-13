@@ -16,7 +16,6 @@ Is a movie's success etched in box office gold and revenue, or does it reside in
 <!-- ![Revenue vs Iceland](/assets/img/revenue_vs_iceland.png) -->
 
 <div class="container">
-<!-- <iframe src="assets/plot/box_office_vs_gdp.html" scrolling="no" frameborder="0" style="position: relative; min_height: 720px,  min_width: 400px">Box office vs Iceland's GDP</iframe> -->
   <iframe class="responsive-iframe" src="assets/plot/box_office_vs_gdp.html"></iframe>
 </div>
 
@@ -26,10 +25,13 @@ By way of comparison, the annual box office of the entire film industry is equiv
 **The Spectrum of Ratings: A Glimpse into Popularity**
 Dive into the world of ratings, you'll see it's less about the extremes and more like a cozy middle part of the road party. 
 
-![movie_ratings](/assets/img/movie_ratings.png)
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
+</div>
 
-![votes](/assets/img/votes.png)
-- [ ] make the graphs visiually appealing, with some lines shwoing the normal distribution, or make a distinction between the high, average, low ratings
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
+</div>
 
 
 (we can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively). The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
