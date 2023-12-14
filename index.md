@@ -55,7 +55,7 @@ To find the most recurrent tropes in the movie industry, we use a Latent Dirichl
 
 We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
 
-This leaves us to wonder what is the proportion of actors that tend to play the same type of movies ?
+This leaves us to wonder what is the proportion of actors that tend to play the same type of movies? Let's find out!
 
 
 We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
