@@ -38,7 +38,7 @@ By way of comparison, the annual box office of the entire film industry is equiv
 
 **The Spectrum of Ratings: A Glimpse into Popularity**
 Dive into the world of ratings, you'll see it's less about the extremes and more like a cozy middle part of the road party. 
-<!--
+
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
 </div>
@@ -46,9 +46,9 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
 </div>
--->
 
 
+<!--
 <div class="row">
   <div class="column">
     <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
@@ -57,7 +57,7 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
     <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
   </div>
 </div>
-
+-->
 
 We can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
 
