@@ -3,7 +3,7 @@ layout: post
 title: Unraveling the connections between actors and characters in movies
 subtitle: Brought to you by the Advanced Data Arsonists
 ---
-\## Introduction 
+## Introduction 
 
 Movies, they're not just projections on a wall, they're emotional odysseys. Each scene, a heartbeat; every line, a thrill. The film industry isn't merely a storyteller, it's a maestro of the grand symphony of creativity and tradition, innovation and nostalgia.
 
@@ -11,7 +11,7 @@ Perched on the shoulders of the [original paper](http://www.cs.CMU.edu/~ark/pers
 
 Our quest unravels the tales within the CMU Movie Summary Corpus—more than 42,000 narratives waiting to spill their secrets. We're mining deeper, armed with IMDb's vast archives and TvTropes' rich insights, to bring new dimensions to the personas we explore.
 
-We're detectives in the green room, deciphering the code of emotions, mapping out the habitual haunts of actors, and spotlighting the bold jumps into the abyss of the unplayed. We're zooming in on patterns, crunching numbers, and charting the emotional pulse of plots, all while peeking behind the casting curtain. Are there hidden patterns in who gets to play the hero, the villain, the heartbreaker? 
+We're on a mission to spot these comfort zones. It's a bit like movie detective work. Do actors reinvent themselves, or do they find a niche and nestle in? We're zooming in on patterns, crunching numbers, and charting the emotional pulse of plots, all while peeking behind the casting curtain. Are there hidden patterns in who gets to play the hero, the villain, the heartbreaker? 
 
 Join us on this exclusive backstage pass as we lift the velvet curtains on the data. Together, we'll navigate through this lattice of information to perhaps capture the essence of cinema—a blend of the uncharted and the classic, the heartbeat of the screen.
 
@@ -38,7 +38,7 @@ By way of comparison, the annual box office of the entire film industry is equiv
 
 **The Spectrum of Ratings: A Glimpse into Popularity**
 Dive into the world of ratings, you'll see it's less about the extremes and more like a cozy middle part of the road party. 
-
+<!--
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
 </div>
@@ -46,9 +46,9 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
 </div>
+-->
 
 
-<!--
 <div class="row">
   <div class="column">
     <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
@@ -57,7 +57,7 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
     <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
   </div>
 </div>
--->
+
 
 We can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
 
