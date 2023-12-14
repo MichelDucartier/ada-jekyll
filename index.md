@@ -57,12 +57,14 @@ We definitely find our beloved villain with persona 43! Words like "vampire", "w
 
 This leaves us to wonder what is the proportion of actors that tend to play the same type of movies? Let's find out!
 
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/actor_roles.html"></iframe>
+</div>
+
 
 We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
 It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone. 
 
-
--> graph
 
  This bifurcation raises intriguing questions: Do more roles equate to greater success, or simply greater visibility? Is the industry inclined to favor a select group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
 One key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack whether they are frequently cast as the villain, the hero, the sidekick, and so on.
