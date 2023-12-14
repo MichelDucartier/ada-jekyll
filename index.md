@@ -34,7 +34,7 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
 </div>
 
 
-(we can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively). The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
+We can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
 
 What has influence over this popularity? Is it a riveting storyline, memorable characters, or the star power of actors? Our love for cinema often ties to the allure of familiar faces. Yet, our analysis uncovers a pattern — a stage where actors don familiar masks more often than not.
 
@@ -43,9 +43,10 @@ What has influence over this popularity? Is it a riveting storyline, memorable c
 As big movie fans, we love some movies because one of our favourite actors play in them.
 However, some actors stick to playing the same characters. We got really intrigued by this phenomena. Let's study each actor and the characters they play.
 
-## Tropes : Define movie tropes in a fun way 
+## Tropes : Figurative or metaphorical personas
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
+## Stereotypes on Screen: The Tropes We Love to Recognize
 To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas. Let's try look at those personas a little bit more closely! To visualize the meaning of different personas, we will use the [word2vec](https://arxiv.org/abs/1301.3781) representations of the most frequent words in a couple of generated tropes. Then, we use TSNE to reduce those high dimensional vectors to 2 dimensions in order to visualize them. Here are our results for a couple of tropes:
 
 <div class="container">
@@ -54,16 +55,22 @@ To find the most recurrent tropes in the movie industry, we use a Latent Dirichl
 
 We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
 
+This leaves us to wonder what is the proportion of actors that tend to play the same type of movies ?
 
 
-We find out that there are only a few famous actors with multiple personas. That means actors actually tend to play similar characters more than we expected, it is like their comfort zones or possible typecasting:where actors are repeatedly cast for similar roles in simply actors tend to have a preference to play some roles more than others. This preference we define it as the cross entropy based metric that represents the "distribution" of the preference.Mutual information gain?
-
-- [ ] draw conclusion from this! or graph or smthg.
-
+We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
 It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone. 
+-> graph
 
-## Stereotypes on Screen: The Tropes We Love to Recognize
+ This bifurcation hints at an intriguing narrative of success and visibility in the acting world. It raises questions: Do more roles equate to greater success, or simply greater visibility? Is the industry inclined to favor a select group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
+One key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack thereof—whether they are frequently cast as the villain, the hero, the sidekick, and so on.
+Another fascinating measure is the mutual information metric. This one goes a step further by comparing an actor's choices against the overall distribution of personas in the acting world. It captures how unique an actor's role selection is compared to the average. In other words, it can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
+... 
 
 
-Our dataset containes  "crazy jealous guy", "jerk jock", "dumb blonde" ...
-- [ ] maybe a network graph of these frequent tropes? 
+
+
+
+
+
+
