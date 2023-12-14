@@ -3,11 +3,25 @@ layout: post
 title: Unraveling the connections between actors and characters in movies
 subtitle: Brought to you by the Advanced Data Arsonists
 ---
+\## Introduction 
 
-## Introduction 
+Movies, they're not just projections on a wall, they're emotional odysseys. Each scene, a heartbeat; every line, a thrill. The film industry isn't merely a storyteller, it's a maestro of the grand symphony of creativity and tradition, innovation and nostalgia.
 
-In the movie industry, creativity is generally considered to be a key factor in the success of a film. Actors often need to reinvent themselves to keep audiences hooked, but do they really ? Some actors tend to develop a comfort zone and keep playing the same type of movies/characters. Our projects aims at discovering those comfort zones, when they are created and what happens when actors step out of it. Conversly, we also want to evaluate if a given role/character tends to be played only by a subset of actors and which feature(s) these actors share, which could lead us to uncover racial or gender biases in film castings. We build on top of the results of the [original paper](http://www.cs.CMU.edu/~ark/personas/) in order to identify in a more fine-grained approach if an actors exhibit a recurring persona accross the characters they play.
+Perched on the shoulders of the [original paper](http://www.cs.CMU.edu/~ark/personas/) paper, we're taking a deep dive into the cinematic psyche. With a more nuanced lens, we're out to uncover if actors wear their characters like well-fitted gloves, repeatedly slipping into familiar roles, or if they're chameleons, constantly changing hues. (refine at the end to say what we did exactly)
 
+Our quest unravels the tales within the CMU Movie Summary Corpus—more than 42,000 narratives waiting to spill their secrets. We're mining deeper, armed with IMDb's vast archives and TvTropes' rich insights, to bring new dimensions to the personas we explore.
+
+We're detectives in the green room, deciphering the code of emotions, mapping out the habitual haunts of actors, and spotlighting the bold jumps into the abyss of the unplayed. We're zooming in on patterns, crunching numbers, and charting the emotional pulse of plots, all while peeking behind the casting curtain. Are there hidden patterns in who gets to play the hero, the villain, the heartbreaker? 
+
+Join us on this exclusive backstage pass as we lift the velvet curtains on the data. Together, we'll navigate through this lattice of information to perhaps capture the essence of cinema—a blend of the uncharted and the classic, the heartbeat of the screen.
+
+<!---
+
+*Old introduction:*
+
+*In the movie industry, creativity is generally considered to be a key factor in the success of a film. Actors often need to reinvent themselves to keep audiences hooked, but do they really ? Some actors tend to develop a comfort zone and keep playing the same type of movies/characters. Our projects aims at discovering those comfort zones, when they are created and what happens when actors step out of it. Conversly, we also want to evaluate if a given role/character tends to be played only by a subset of actors and which feature(s) these actors share, which could lead us to uncover racial or gender biases in film castings. We build on top of the results of the [original paper](http://www.cs.CMU.edu/~ark/personas/) in order to identify in a more fine-grained approach if an actors exhibit a recurring persona accross the characters they play.*
+
+-->
 
 ## Unraveling the threads of cinematic success
 
@@ -33,6 +47,17 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
   <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
 </div>
 
+
+<!--
+<div class="row">
+  <div class="column">
+    <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
+  </div>
+  <div class="column">
+    <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
+  </div>
+</div>
+-->
 
 We can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
 
