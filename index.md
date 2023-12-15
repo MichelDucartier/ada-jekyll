@@ -24,6 +24,8 @@ Join us on this exclusive backstage pass as we lift the velvet curtains on the d
 
 -->
 
+### Tiny description of what was done on the original paper ?
+
 ## Unraveling the threads of cinematic success
 
 Is a movie's success etched in box office gold and revenue, or does it reside in the hearts of viewers and the pens of critics? While blockbusters rake in the cash, they represent just a sliver of the film universe.
@@ -97,32 +99,47 @@ It turns out Hollywood's got a "type," and many actors fit right into it. The bi
 
  This bifurcation raises intriguing questions: Do more roles equate to greater success, or simply greater visibility? Is the industry inclined to favor a select group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
 One key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack whether they are frequently cast as the villain, the hero, the sidekick, and so on.
-Another fascinating measure is the **mutual information metric, MIP**. At its core, MIP is about information gain—the degree to which knowing about an actor’s previous roles gives us insight into their future roles. 
+Another fascinating measure is the **mutual information preference metric, MIP**. At its core, MIP is about information gain—the degree to which knowing about an actor’s previous roles gives us insight into their future roles. 
 1. A MIP score of 1 signifies an actor with a singular focus
 2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres. (Emma Watson)
-3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Deep face)
+3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Deep)
 
 In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
-### WRONG GRAPH
-![Distribution of actors with respect to MIP score of personas](assets/img/MIP.png)
+
+### Mutual Information Preference score of personas: 
+We have gathered a comprehensive collection of distinct character tropes. Each actor's set of characters is distilled into a unique distribution, representing their personal spectrum of on-screen personas. From the solitary hero to the ingenious antagonist, each trope contributes to this array.
+
+The heart of the analysis lies in the construction of the global distribution of these tropes. By calculating the entropy of this distribution, we obtain a measure of the overall diversity present in character tropes within the acting world. High entropy indicates a vast, unpredictable array of character types, while lower entropy suggests a more uniform or predictable set of character tropes... continue
 
 
-As we delve into the histogram, we see a pattern emerging. A dense cluster around the middle suggests that a significant number of actors have a moderate level of uniqueness in their role selection. They might have a 'signature' role type but occasionally step out of their comfort zone. This might be an industry sweet spot or comfort zone. 
+The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the collective narrative palette. An actor whose range of personas closely matches the global distribution would have an MIP score approaching zero, suggesting a versatile adaptability to the myriad roles the industry offers. In contrast, actors with higher MIP scores tend to have a more specialized or distinctive selection of character tropes, indicating a niche or a strong association with particular kinds of roles.
 
-But what about the extremes? Those few on the left, with low mutual information scores, are the industry's chameleons. They leap from role to role. On the opposite side, the right tail presents us with specialists, perhaps they've found their niche or, conversely, found themselves restricted by it.
-
-This data invites us to consider the delicate balance actors must strike between personal choice and industry constraints. Are they following their passions or simply playing it safe? Or perhaps the industry's casting patterns have more to do with audience expectations and market demands than with actors' preferences.
+![Distribution of actors with respect to MIP score of personas](assets/img/mip_personas.png)
 
 
+
+
+The histogram is bell-shaped with a substantial spread but with a skewness towards higher MIP scores. This distribution indicates that while there's a strong central tendency — most actors have an average degree of persona specialization.
+The thicker right tail suggests that there are more actors than expected who tend to play similar types of characters consistently, as opposed to having a broader range. These are likely actors who have found a niche or are frequently typecast. The thinner left side, shows fewer actors who are characterized by a wide variety of roles, the industry's versatile figures and chameleons, leaping from role to role.
+
+
+The plot highlights the extremes: We have a lot more actors with high MIP socres, offten stepping into an electic array or roles and tend to be more predictable in their role choices. The right tail presents us the specialists that have found their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
+
+
+### Mutual Information Preference score of genres
 ![Distribution of actors wih respect to MIP scores of genres ](assets/img/distrub_genres.png)
 
 Turning our lens to the realm of genres, the visualization before us, a distribution of actors with respect to the Mutual Information Precision (MIP) score of genres—offers a quantified glimpse into this interplay between actors and the genres they navigate.
 MIP metric, when applied to genres, tells a story about an actor's alignment with the industry's genre landscape. (add global genre distribution)
-As we look towards the tails of the distribution, the story evolves. The peak around the zero mark suggests a majority of actors whose genre affiliations are in harmony with industry trends. However, the spread of the distribution—reaching into both positive and negative MIP scores—reveals the diversity of actors' approaches to their craft. To the **left**, where the MIP scores dip into the negatives, are the actors whose genre choices are less predictable, those who defy easy categorization. These are the risk-takers or perhaps those who are not so easily embraced by the mainstream, their filmographies a patchwork of various styles and narratives.
+The peak around the zero mark suggests a majority of actors whose genre affiliations are in harmony with industry trends. To the **left**, where the MIP scores dip into the negatives, are the actors whose genre choices are less predictable, those who defy easy categorization. 
 To the **right**, the graph thins out, representing those few actors whose choices are highly predictable, whose careers are tightly intertwined with specific genres. These could be the icons of their domains—actors who, when we think of a thriller or a sci-fi epic, come readily to mind.
 
 This distribution of actors across genres raises questions about the forces that shape an actor's career trajectory. Is it personal inclination, the allure of certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
 
+<!-- These are the risk-takers or perhaps those who are not so easily embraced by the mainstream, their filmographies a patchwork of various styles and narratives.
+-->
+
+### Plot that michael did
 
 
 
