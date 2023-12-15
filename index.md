@@ -115,9 +115,10 @@ The heart of the analysis lies in the construction of the global distribution of
 
 The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the collective narrative palette. An actor whose range of personas closely matches the global distribution would have an MIP score approaching zero, suggesting a versatile adaptability to the myriad roles the industry offers. In contrast, actors with higher MIP scores tend to have a more specialized or distinctive selection of character tropes, indicating a niche or a strong association with particular kinds of roles.
 
-![Distribution of actors with respect to MIP score of personas](assets/img/mip_personas.png)
 
-
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/mip_personas.html"></iframe>
+</div>
 
 
 The histogram is bell-shaped with a substantial spread but with a skewness towards higher MIP scores. This distribution indicates that while there's a strong central tendency — most actors have an average degree of persona specialization.
@@ -128,7 +129,9 @@ The plot highlights the extremes: We have a lot more actors with high MIP socres
 
 
 ### Mutual Information Preference score of genres
-![Distribution of actors wih respect to MIP scores of genres ](assets/img/distrub_genres.png)
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/mip_genre.html"></iframe>
+</div>
 
 Turning our lens to the realm of genres, the visualization before us, a distribution of actors with respect to the Mutual Information Precision (MIP) score of genres—offers a quantified glimpse into this interplay between actors and the genres they navigate.
 MIP metric, when applied to genres, tells a story about an actor's alignment with the industry's genre landscape. (add global genre distribution)
@@ -143,4 +146,7 @@ This distribution of actors across genres raises questions about the forces that
 ### Plot that michael did
 
 
-
+### Somthing else
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/log_likelihood_tropes.html"></iframe>
+</div>
