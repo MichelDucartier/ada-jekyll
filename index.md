@@ -22,9 +22,10 @@ Join us on this exclusive backstage pass as we lift the velvet curtains on the d
 
 *In the movie industry, creativity is generally considered to be a key factor in the success of a film. Actors often need to reinvent themselves to keep audiences hooked, but do they really ? Some actors tend to develop a comfort zone and keep playing the same type of movies/characters. Our projects aims at discovering those comfort zones, when they are created and what happens when actors step out of it. Conversly, we also want to evaluate if a given role/character tends to be played only by a subset of actors and which feature(s) these actors share, which could lead us to uncover racial or gender biases in film castings. We build on top of the results of the [original paper](http://www.cs.CMU.edu/~ark/personas/) in order to identify in a more fine-grained approach if an actors exhibit a recurring persona accross the characters they play.*
 
--->
+
 
 ### Tiny description of what was done on the original paper ?
+-->
 
 ## Unraveling the threads of cinematic success
 
@@ -102,7 +103,7 @@ One key metric is the cross entropy metric, which essentially measures the predi
 Another fascinating measure is the **mutual information preference metric, MIP**. At its core, MIP is about information gain—the degree to which knowing about an actor’s previous roles gives us insight into their future roles. 
 1. A MIP score of 1 signifies an actor with a singular focus
 2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres. (Emma Watson)
-3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Deep)
+3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Depp)
 
 In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
 
@@ -132,7 +133,7 @@ The plot highlights the extremes: We have a lot more actors with high MIP socres
 Turning our lens to the realm of genres, the visualization before us, a distribution of actors with respect to the Mutual Information Precision (MIP) score of genres—offers a quantified glimpse into this interplay between actors and the genres they navigate.
 MIP metric, when applied to genres, tells a story about an actor's alignment with the industry's genre landscape. (add global genre distribution)
 The peak around the zero mark suggests a majority of actors whose genre affiliations are in harmony with industry trends. To the **left**, where the MIP scores dip into the negatives, are the actors whose genre choices are less predictable, those who defy easy categorization. 
-To the **right**, the graph thins out, representing those few actors whose choices are highly predictable, whose careers are tightly intertwined with specific genres. These could be the icons of their domains—actors who, when we think of a thriller or a sci-fi epic, come readily to mind.
+To the **right**, the graph thins out, representing those few actors whose careers are tightly intertwined with specific genres. These could be the icons of their domains—actors who, when we think of a thriller or a sci-fi epic, come readily to mind.
 
 This distribution of actors across genres raises questions about the forces that shape an actor's career trajectory. Is it personal inclination, the allure of certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
 
