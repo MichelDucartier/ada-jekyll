@@ -18,30 +18,29 @@ Join us on this exclusive backstage pass as we lift the velvet curtains on the d
 
 <!---
 
-*Old introduction:*
-
-*In the movie industry, creativity is generally considered to be a key factor in the success of a film. Actors often need to reinvent themselves to keep audiences hooked, but do they really ? Some actors tend to develop a comfort zone and keep playing the same type of movies/characters. Our projects aims at discovering those comfort zones, when they are created and what happens when actors step out of it. Conversly, we also want to evaluate if a given role/character tends to be played only by a subset of actors and which feature(s) these actors share, which could lead us to uncover racial or gender biases in film castings. We build on top of the results of the [original paper](http://www.cs.CMU.edu/~ark/personas/) in order to identify in a more fine-grained approach if an actors exhibit a recurring persona accross the characters they play.*
-
-
-
 ### Tiny description of what was done on the original paper ?
 -->
 
-## Unraveling the threads of cinematic success
+## How successful is the movie industry?
 
-Is a movie's success etched in box office gold and revenue, or does it reside in the hearts of viewers and the pens of critics? While blockbusters rake in the cash, they represent just a sliver of the film universe.
-
-<!-- ![Revenue vs Iceland](/assets/img/revenue_vs_iceland.png) -->
+But first we need to ask ourselves how big is this success? Is the movie industry as lucrative as we think? Or is it some petty money that does not deserve our attention... To get a more intuitive feel about the magnitude of the money involved, we need to compare the movies' revenue to something tangible such as a country's GDP for instance!
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/box_office_vs_gdp.html"></iframe>
 </div>
 
 
-By way of comparison, the annual box office of the entire film industry is equivalent to Iceland's GDP! But why are they so popular? What makes a good movie? Let's delve into what truly marks a film's success!
+By way of comparison, the annual box office of the entire film industry is equivalent to Iceland's GDP! Keep in mind that this plot only takes into account the *box-office* revenue of the film industry. Other sources of revenues such as streaming platform or DVDs are not even counted in this plot! But why are they so popular? What makes a good movie? Let's delve into what truly marks a film's success!
+
+## Unraveling the threads of cinematic success
+
+Meet our new friend Bob! Bob is a newcomer in the movie acting world. He has always been a fan of sci-fi movies like Star Wars! His favourite character is Darth Vader because he really enjoys playing the bad guy. However, Bob is not a fool, he knows that the industry is ruthless. One mistake and your career is over! He is really worried that he can not play the same character over and over again as he will become too predictable. On the other hand, he also fears falling into the other extreme, i.e. playing several different types of role without forging a clear identity. What should he do? Well, let's help him with some data analysis!
 
 **The Spectrum of Ratings: A Glimpse into Popularity**
-Dive into the world of ratings, you'll see it's less about the extremes and more like a cozy middle part of the road party. 
+
+Bob really wants to maximise the income from the films he plays in. Unfortunately, only a handful of films are able to make it to the box office. Indeed, in our dataset almost 90% of movies does not have a box-office revenue! Bob is still a newcomer to this industry and can not play in those big blockbusters yet. Nonetheless, he remembers why he wanted to become an actor in the first place. Even though money is important, Bob has always wanted to move people's hearts! 
+
+Therefore, let's have a look at the movies' rating. In our analysis, we choose the IMDb database. As we'll see, it's less about the extremes and more like a cozy middle part of the road party. 
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
@@ -51,34 +50,23 @@ Dive into the world of ratings, you'll see it's less about the extremes and more
   <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
 </div>
 
+We can notice from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of votes.   
+<!-- The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings. -->
 
-<!--
-<div class="row">
-  <div class="column">
-    <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
-  </div>
-  <div class="column">
-    <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
-  </div>
-</div>
--->
+What has influence over this popularity? Is it a riveting storyline, memorable characters, or the star power of actors? Our love for cinema often ties to the allure of familiar faces. 
 
-We can notice that from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of movies.  The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings.
+**Is diversity about roles?**
 
-What has influence over this popularity? Is it a riveting storyline, memorable characters, or the star power of actors? Our love for cinema often ties to the allure of familiar faces. Yet, our analysis uncovers a pattern — a stage where actors don familiar masks more often than not.
+**TODO**
 
-## Star Power: Are Actors the Puppet Masters of Popularity?
+### Tropes : Figurative or metaphorical personas
 
-As big movie fans, we love some movies because one of our favourite actors play in them.
-However, some actors stick to playing the same characters. We got really intrigued by this phenomena. Let's study each actor and the characters they play.
+To uncover the best strategy for Bob, he needs to know what sort of roles he needs to play. Can he stick to play those menacing villains like Darth Vader during his whole career? But before we answer this question, we need to know what defines a "villain". Not in the philosophical sense but as a cliché! In other words, we need to extract the different tropes from our movies.
 
-...
-
-
-## Tropes : Figurative or metaphorical personas
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
-## Stereotypes on Screen: The Tropes We Love to Recognize
+### Stereotypes on Screen: The Tropes We Love to Recognize
+
 To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas. Let's try look at those personas a little bit more closely! To visualize the meaning of different personas, we will use the [word2vec](https://arxiv.org/abs/1301.3781) representations of the most frequent words in a couple of generated tropes. Then, we use TSNE to reduce those high dimensional vectors to 2 dimensions in order to visualize them. Here are our results for a couple of tropes:
 
 <div class="container">
@@ -87,18 +75,8 @@ To find the most recurrent tropes in the movie industry, we use a Latent Dirichl
 
 We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
 
-This leaves us to wonder what is the proportion of actors that tend to play the same type of movies? Let's find out!
 
-<div class="container">
-  <iframe class="responsive-iframe" src="assets/plot/actor_roles.html"></iframe>
-</div>
-
-
-We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
-It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone. 
-
-
- This bifurcation raises intriguing questions: Do more roles equate to greater success, or simply greater visibility? Is the industry inclined to favor a select group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
+This bifurcation raises intriguing questions: Do more roles equate to greater success, or simply greater visibility? Is the industry inclined to favor a select group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
 One key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack whether they are frequently cast as the villain, the hero, the sidekick, and so on.
 Another fascinating measure is the **mutual information preference metric, MIP**. At its core, MIP is about information gain—the degree to which knowing about an actor’s previous roles gives us insight into their future roles. 
 1. A MIP score of 1 signifies an actor with a singular focus
