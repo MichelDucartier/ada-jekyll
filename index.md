@@ -50,24 +50,31 @@ Therefore, let's have a look at the movies' rating. In our analysis, we choose t
   <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
 </div>
 
-We can notice from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of votes.   
-<!-- The "more votes, more hype" graph shows that if a movie gets more eyeballs, it's likely to get more love or hate in the ratings. -->
+We can notice from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of votes.
 
-What has influence over this popularity? Is it a riveting storyline, memorable characters, or the star power of actors? Our love for cinema often ties to the allure of familiar faces. 
+What has influence over this popularity? Is it a memorable characters, or the star power of actors? Should Bob play the same type of character over and over again to create a sense of comfort in the public, or does he need to keep reinventing himself to surprise the audience?
+To uncover the best strategy for Bob, he needs to know what sort of roles he needs to play. Can he stick to play those menacing villains like Darth Vader during his whole career? But before we answer this question, we need to know what defines a "villain". Not in the philosophical sense but as a cliché! In other words, we need to extract the different tropes from our movies.
 
-**Is diversity about roles?**
+<!-- 
+**Roles as a measure of actors' ability to reinvent themselves?**
 
-**TODO**
+It could be tempting
+
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/actor_roles.html"></iframe>
+</div>
+
+We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
+It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone.  -->
+
 
 ### Tropes : Figurative or metaphorical personas
-
-To uncover the best strategy for Bob, he needs to know what sort of roles he needs to play. Can he stick to play those menacing villains like Darth Vader during his whole career? But before we answer this question, we need to know what defines a "villain". Not in the philosophical sense but as a cliché! In other words, we need to extract the different tropes from our movies.
 
 Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
 
 ### Stereotypes on Screen: The Tropes We Love to Recognize
 
-To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas. Let's try look at those personas a little bit more closely! To visualize the meaning of different personas, we will use the [word2vec](https://arxiv.org/abs/1301.3781) representations of the most frequent words in a couple of generated tropes. Then, we use TSNE to reduce those high dimensional vectors to 2 dimensions in order to visualize them. Here are our results for a couple of tropes:
+To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas. Let's try look at those personas a little bit more closely! Every actor's role are associated with a vector of 50 components. Each component $i$ represent the "porportion" of persona $i$ represented in the given role. To visualize the meaning of different personas, we will use the [word2vec](https://arxiv.org/abs/1301.3781) representations of the most frequent words in a couple of generated tropes. Then, we use TSNE to reduce those high dimensional vectors to 2 dimensions in order to visualize them. Here are our results for a couple of tropes:
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/persona_scatter.html"></iframe>
@@ -75,13 +82,47 @@ To find the most recurrent tropes in the movie industry, we use a Latent Dirichl
 
 We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
 
+### A measure of an actor's preference: Mutual Information Preference
 
-This bifurcation raises intriguing questions: Do more roles equate to greater success, or simply greater visibility? Is the industry inclined to favor a select group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
-One key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack whether they are frequently cast as the villain, the hero, the sidekick, and so on.
-Another fascinating measure is the **mutual information preference metric, MIP**. At its core, MIP is about information gain—the degree to which knowing about an actor’s previous roles gives us insight into their future roles. 
+This bifurcation raises intriguing questions: Do more tropes equate to greater success, or simply greater visibility? Is the industry inclined to favor a selected group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
+<!-- One first key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack whether they are frequently cast as the villain, the hero, the sidekick, and so on. -->
+
+Our first key metric is the **mutual information preference metric, MIP**. Conceptually, let's imagine that Alice takes a random role in our dataset and among the different personas that make up this role, she chooses one persona randomly with probabilities proportional to the proportion of the persona for this role (i.e if a role is 50% "bad guy" and 50% "big muscled guy", then Alice has 50% of chance to choose the "bad guy" persona and likewise for the "big muscled guy"). Our best shot to guess which persona she took would be to take the most represented persona:
+
+<div class="row">
+  <div class="small-column">
+    <span class="helper"></span> <img src="assets/img/default_portrait.png" class="portrait-img" alt="DefaultPortrait" style="width:100% ">
+  </div>
+  <div class="big-column">
+    <iframe class="fixed-iframe" src="assets/plot/persona_global.html" ></iframe>  
+  </div>
+</div>
+
+In our case, this would be the persona 50. The 5 most important verbs for this persona are: "put", "read", "drive", "stay" and "feel". We get the impression that we're dealing with a character with no personality, a generic character who is only there to fill the void on the screen. But now, let's suppose that I tell you that Christopher Lee (the one who played Count Dooku, one of Bob's favourite characters) is the one who played this role!
+
+<div class="row">
+  <div class="small-column">
+    <span class="helper"></span> <img src="assets/img/christopher_lee.png" class="portrait-img" alt="ChristopherLee" style="width:100% ">
+  </div>
+  <div class="big-column">
+    <iframe class="fixed-iframe" src="assets/plot/christopher_lee_persona.html" ></iframe>  
+  </div>
+</div>
+
+
+Now our answer would be different because **we gained information about the mystery persona**. Indeed, Christopher Lee tends to play the bad guy (Count Dooku, Saruman, Dracula, ...) which is not something that actors do in the general tendency. If we look at the most represented personas for Christopher Lee, we see that Persona 36 and 34 are much more represented than the other ones. Here are the top verbs for both personas:
+- Persona 36: "go", "turn", "put", "throw", "reveal", "keep"
+- Persona 34: "recognize", "arrange", "place", "set", "invite", "threaten"
+
+Persona 36 seems to be a generic persona without too much obvious structure. However, persona 34 is much more interesting. Words like "threaten", "arrange", "place", "set" and "invite" suggest that this persona captures some sort of manipulative villain which is very fitting for an actor like Christopher Lee!
+
+In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles are typically different from the other actors**. In the other extreme, if an actor tends to play roles that are very close to the global distribution, then we would gain no information about this "mystery persona"
+
+**TODO** : Replace MIP by KL divergence? (should not change much for this part)
+<!-- 
 1. A MIP score of 1 signifies an actor with a singular focus
 2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres. (Emma Watson)
-3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Depp)
+3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Depp) -->
 
 In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
 
