@@ -82,12 +82,11 @@ To find the most recurrent tropes in the movie industry, we use a Latent Dirichl
 
 We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
 
-### A measure of an actor's preference: Mutual Information Preference
+### A measure of an actor's preference relatively to the music industry
 
 This bifurcation raises intriguing questions: Do more tropes equate to greater success, or simply greater visibility? Is the industry inclined to favor a selected group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
-<!-- One first key metric is the cross entropy metric, which essentially measures the predictability of an actor's persona based on their previous roles. It gives us a numerical value representing how often an actor is seen in a particular type of role. Think of it as a way to quantify an actor's range or lack whether they are frequently cast as the villain, the hero, the sidekick, and so on. -->
 
-Our first key metric is the **mutual information preference metric, MIP**. Conceptually, let's imagine that Alice takes a random role in our dataset and among the different personas that make up this role, she chooses one persona randomly with probabilities proportional to the proportion of the persona for this role (i.e if a role is 50% "bad guy" and 50% "big muscled guy", then Alice has 50% of chance to choose the "bad guy" persona and likewise for the "big muscled guy"). Our best shot to guess which persona she took would be to take the most represented persona:
+Conceptually, let's imagine that Alice takes a random role in our dataset and among the different personas that make up this role, she chooses one persona randomly with probabilities proportional to the proportion of the persona for this role (i.e if a role is 50% "bad guy" and 50% "big muscled guy", then Alice has 50% of chance to choose the "bad guy" persona and likewise for the "big muscled guy"). Our best shot to guess which persona she took would be to take the most represented persona:
 
 <div class="row">
   <div class="small-column">
@@ -110,30 +109,24 @@ In our case, this would be the persona 50. The 5 most important verbs for this p
 </div>
 
 
-Now our answer would be different because **we gained information about the mystery persona**. Indeed, Christopher Lee tends to play the bad guy (Count Dooku, Saruman, Dracula, ...) which is not something that actors do in the general tendency. If we look at the most represented personas for Christopher Lee, we see that Persona 36 and 34 are much more represented than the other ones. Here are the top verbs for both personas:
+Now our answer would be different because **we gained information about the mystery persona**. Indeed, Christopher Lee tends to always play the same persona: the bad guy! He is Count Dooku, Saruman, Dracula, ... If we look at the most represented personas for Christopher Lee, we see that Persona 36 and 34 are much more represented than the other ones. Here are the top verbs for both personas:
 - Persona 36: "go", "turn", "put", "throw", "reveal", "keep"
 - Persona 34: "recognize", "arrange", "place", "set", "invite", "threaten"
 
 Persona 36 seems to be a generic persona without too much obvious structure. However, persona 34 is much more interesting. Words like "threaten", "arrange", "place", "set" and "invite" suggest that this persona captures some sort of manipulative villain which is very fitting for an actor like Christopher Lee!
 
-In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles are typically different from the other actors**. In the other extreme, if an actor tends to play roles that are very close to the global distribution, then we would gain no information about this "mystery persona"
+In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles revolve around a couple of tropes**. In the other extreme, if an actor tends to play personas that are very uniform, then we would actually lose information about this "mystery persona"
 
-**TODO** : Replace MIP by KL divergence? (should not change much for this part)
-<!-- 
-1. A MIP score of 1 signifies an actor with a singular focus
-2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres. (Emma Watson)
-3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average. (Johnny Depp) -->
-
-In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
 
 ### Mutual Information Preference score of personas: 
-We have gathered a comprehensive collection of distinct character tropes. Each actor's set of characters is distilled into a unique distribution, representing their personal spectrum of on-screen personas. From the solitary hero to the ingenious antagonist, each trope contributes to this array.
 
-The heart of the analysis lies in the construction of the global distribution of these tropes. By calculating the entropy of this distribution, we obtain a measure of the overall diversity present in character tropes within the acting world. High entropy indicates a vast, unpredictable array of character types, while lower entropy suggests a more uniform or predictable set of character tropes... continue
-
-
+With this key idea of information gain we design our first key metric: the **mutual information preference metric, MIP**. 
 The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the collective narrative palette. An actor whose range of personas closely matches the global distribution would have an MIP score approaching zero, suggesting a versatile adaptability to the myriad roles the industry offers. In contrast, actors with higher MIP scores tend to have a more specialized or distinctive selection of character tropes, indicating a niche or a strong association with particular kinds of roles.
+In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
 
+1. A MIP score of 1 signifies an actor with a singular focus
+2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres.
+3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/mip_personas.html"></iframe>
@@ -143,11 +136,11 @@ The MIP score for each trope distribution reveals how closely an actor's choices
 The histogram is bell-shaped with a substantial spread but with a skewness towards higher MIP scores. This distribution indicates that while there's a strong central tendency — most actors have an average degree of persona specialization.
 The thicker right tail suggests that there are more actors than expected who tend to play similar types of characters consistently, as opposed to having a broader range. These are likely actors who have found a niche or are frequently typecast. The thinner left side, shows fewer actors who are characterized by a wide variety of roles, the industry's versatile figures and chameleons, leaping from role to role.
 
-
-The plot highlights the extremes: We have a lot more actors with high MIP socres, offten stepping into an electic array or roles and tend to be more predictable in their role choices. The right tail presents us the specialists that have found their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
+The plot highlights the extremes: We have a lot more actors with high MIP scores, often stepping into an electic array or roles and tend to be more predictable in their role choices. The right spike presents us the specialists that have found their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
 
 
 ### Mutual Information Preference score of genres
+
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/mip_genre.html"></iframe>
 </div>
