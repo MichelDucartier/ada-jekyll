@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The love-hate relationship of actors and characters
+title: The love-hate relationship between actors and their characters
 subtitle: Brought to you by the Advanced Data Arsonists
 ---
 
@@ -10,15 +10,21 @@ Movies, they're not just projections on a wall, they're emotional odysseys. Each
 is ingeniously written. The film industry isn't merely a storyteller, it's a maestro of the grand symphony of creativity
 and tradition, innovation and nostalgia.
 
-Perched on the shoulders of the [original paper](http://www.cs.CMU.edu/~ark/personas/) paper, we're taking a deep dive into the cinematic psyche. With a more nuanced lens, we're out to uncover if actors wear their characters like well-fitted gloves, repeatedly slipping into familiar roles, or if they're chameleons, constantly changing hues. (refine at the end to say what we did exactly)
+Perched on the shoulders of the [original publication](http://www.cs.CMU.edu/~ark/personas/), we're taking a deep dive
+into cinematic personas. With a more nuanced lens, we're out to uncover if actors wear their characters like well-fitted
+gloves, repeatedly slipping into familiar roles, or if they're chameleons, constantly changing hues.
 
-Our quest unravels the tales within the CMU Movie Summary Corpus—more than 42,000 narratives waiting to spill their secrets. We're mining deeper, armed with IMDb's vast archives and TvTropes' rich insights, to bring new dimensions to the personas we explore.
+Our quest starts with the tales within the CMU Movie Summary Corpus — more than 42,000 narratives waiting to spill their
+secrets. We're exploring deeper, armed with IMDb's vast archives and WikiData' rich knowledge base, to bring new 
+dimensions to the personas we explore.
 
+We're on a mission to spot actors that created comfort zones for themselves, our magnifying glass being our data analysis
+knowledge. Throughout this analysis, we will be zooming in on patterns, crunching numbers, and charting plots to uncover
+comfort zones in movie genres and in personas. We'll also take a peek behind the casting curtain to try and find hidden
+patterns in who gets to play the hero, the villain, the casanova?
 
-We're on a mission to spot these comfort zones. It's a bit like movie detective work. Do actors reinvent themselves, or do they find a niche and nestle in? We're zooming in on patterns, crunching numbers, and charting the emotional pulse of plots, all while peeking behind the casting curtain. Are there hidden patterns in who gets to play the hero, the villain, the heartbreaker? 
-
-Join us on this exclusive backstage pass as we lift the velvet curtains on the data. Together, we'll navigate through this lattice of information to perhaps capture the essence of cinema—a blend of the uncharted and the classic, the heartbeat of the screen.
-
+Join us on this exclusive backstage pass as we lift the velvet curtains on this data. Together, we'll navigate through
+this lattice of information to perhaps capture the essence of cinema typecasting.
 <!---
 
 ### Tiny description of what was done on the original paper ?
