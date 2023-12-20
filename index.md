@@ -1,8 +1,7 @@
 ---
 layout: post
-title: Unraveling the connections between actors and characters in movies
+title: Actors and characters: a love-hate relationship
 subtitle: Brought to you by the Advanced Data Arsonists
-background: '/assets/img/MIP.png'
 ---
 
 ## Introduction 
