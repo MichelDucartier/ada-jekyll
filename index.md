@@ -208,28 +208,25 @@ The plot highlights the extremes: We have a lot more actors with high MIP scores
 or roles and tend to be more predictable in their role choices. The right spike presents us the specialists that have found 
 their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
 
-# Luca stopped here
-
 ### Mutual Information Preference score of genres
+
+We apply roughly the same process on movie genres. For each actor, we recover all the movies they played in and the
+genre distribution of those movies. Using this information and the global genre distribution we compute an second MIP
+score for each actor. Note that we don't need to use averages here, because this genre distribution is not affected by
+a particular movie, in contrast to personas which differ for each character within a given movie.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/mip_genre.html"></iframe>
 </div>
 
-Turning our lens to the realm of genres, the visualization before us, a distribution of actors with respect to the Mutual Information Precision (MIP) score of genres—offers a quantified glimpse into this interplay between actors and the genres they navigate.
-MIP metric, when applied to genres, tells a story about an actor's alignment with the industry's genre landscape. (add global genre distribution)
-The peak around the zero mark suggests a majority of actors whose genre affiliations are in harmony with industry trends. To the **left**, where the MIP scores dip into the negatives, are the actors whose genre choices are less predictable, those who defy easy categorization. 
-To the **right**, the graph thins out, representing those few actors whose careers are tightly intertwined with specific genres. These could be the icons of their domains—actors who, when we think of a thriller or a sci-fi epic, come readily to mind.
+The MIP metric, when applied to genres, tells a story about an actor's alignment with the industry's genre landscape.
+The distribution is much more concentrated around 0.25 and has minimal spread. This distribution of actors across genres
+raises questions about the forces that shape an actor's career trajectory. Is it personal inclination, the allure of
+certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of
+an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
 
-This distribution of actors across genres raises questions about the forces that shape an actor's career trajectory. Is it personal inclination, the allure of certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
+### guillaume part
 
-<!-- These are the risk-takers or perhaps those who are not so easily embraced by the mainstream, their filmographies a patchwork of various styles and narratives.
--->
-
-### Plot that michael did
+### Fares plots and analysis
 
 
-### Somthing else
-<div class="container">
-  <iframe class="responsive-iframe" src="assets/plot/log_likelihood_tropes.html"></iframe>
-</div>
