@@ -173,30 +173,42 @@ this persona captures some sort of manipulative villain which is very fitting fo
 
 In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles revolve around
 a couple of tropes**. In the other extreme, if an actor tends to play personas that are very uniform,
-then we would actually lose information about this "mystery persona"
-
-# Luca Here
+then we would actually lose information about this "mystery persona".
 
 ### Mutual Information Preference score of personas: 
 
 With this key idea of information gain we design our first key metric: the **mutual information preference metric, MIP**. 
-The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the collective narrative palette. An actor whose range of personas closely matches the global distribution would have an MIP score approaching zero, suggesting a versatile adaptability to the myriad roles the industry offers. In contrast, actors with higher MIP scores tend to have a more specialized or distinctive selection of character tropes, indicating a niche or a strong association with particular kinds of roles.
+The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the
+collective narrative palette. An actor whose range of personas closely matches the global distribution would have an MIP
+score approaching zero, suggesting a versatile adaptability to the myriad roles the industry offers. In contrast, actors
+with higher MIP scores tend to have a more specialized or distinctive selection of character tropes, indicating a niche
+or a strong association with particular kinds of roles.
 In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
 
 1. A MIP score of 1 signifies an actor with a singular focus
 2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres.
-3. An MIP score below 0 is where things get even more interesting. Here we find actors who are the very embodiment of diversity, their choices more varied than the industry average.
+3. Any value in-between reflects a polarization of a certain degree
+
+For each actor we have computed an "average persona", which is taken over all characters they played. We compute the MIP
+of this average persona and report the density of actors over MIP scores below.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/mip_personas.html"></iframe>
 </div>
 
+As we can observe, the average persona's MIP score of actors tends to be around 0.4, meaning a relatively average polarisation of roles.
+The histogram is bell-shaped with a substantial spread. This distribution indicates that while there's a strong central
+tendency — most actors have an average degree of persona specialization. The very high spike in density at 1 is due to
+actors for which the average persona was fully polarized, that is they only played a single persona accross their movies.
+These are likely actors who have only played relatively few movies, or found a niche for which they are frequently typecast.
+The thinner left side, shows fewer actors who are characterized by a wide variety of roles, the industry's versatile figures 
+and chameleons, leaping from role to role.
 
-The histogram is bell-shaped with a substantial spread but with a skewness towards higher MIP scores. This distribution indicates that while there's a strong central tendency — most actors have an average degree of persona specialization.
-The thicker right tail suggests that there are more actors than expected who tend to play similar types of characters consistently, as opposed to having a broader range. These are likely actors who have found a niche or are frequently typecast. The thinner left side, shows fewer actors who are characterized by a wide variety of roles, the industry's versatile figures and chameleons, leaping from role to role.
+The plot highlights the extremes: We have a lot more actors with high MIP scores, often stepping into an electic array
+or roles and tend to be more predictable in their role choices. The right spike presents us the specialists that have found 
+their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
 
-The plot highlights the extremes: We have a lot more actors with high MIP scores, often stepping into an electic array or roles and tend to be more predictable in their role choices. The right spike presents us the specialists that have found their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
-
+# Luca stopped here
 
 ### Mutual Information Preference score of genres
 
