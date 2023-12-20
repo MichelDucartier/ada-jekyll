@@ -51,7 +51,7 @@ a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or th
 the one-liners, these are the bread and butter of movie land and we just can't get enough of them. So personas are role
 or character archetypes. To get a more intuivtive feel of what they are exactly, we've run the original publication
 processing pipeline to extract the latent topics of different personas. These latent topics are linked to a list of the
-most frequent words that occur in them. Then, we apply a dimensionality reduction algorithm (t-SNE) that allows us to
+most frequent words that occur in them. Then, using Word2Vec and a dimensionality reduction algorithm (t-SNE) allows us to
 reduce those high dimensional vectors to 2 dimensions and visualize them. Here are a couple of character tropes visualized:
 
 <div class="container">
@@ -66,7 +66,7 @@ into a party where enemies are the uninvited guests...
 
 ### Don't worry, we didn't forget about your favourite action movie star
 
-We will also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
+We also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
 they play in. We can visualize the genre distribution of movies in the pie chart below.
 
 <div class="container">
@@ -76,17 +76,24 @@ they play in. We can visualize the genre distribution of movies in the pie chart
 Something interesting emerging here is that movie genres are not very polarized. We do not have a couple of overwhelmingly
 big fractions of one type of movies and breadcrumbs around them.
 
-# Luca STOP
-
 ## Unraveling the threads of cinematic success
 
-Meet our new friend Bob! Bob is a newcomer in the movie acting world. He has always been a fan of sci-fi movies like Star Wars! His favourite character is Darth Vader because he really enjoys playing the bad guy. However, Bob is not a fool, he knows that the industry is ruthless. One mistake and your career is over! He is really worried that he can not play the same character over and over again as he will become too predictable. On the other hand, he also fears falling into the other extreme, i.e. playing several different types of role without forging a clear identity. What should he do? Well, let's help him with some data analysis!
+Meet our new friend Bob! Bob is a newcomer in the movie acting world. He has always been a fan of sci-fi movies like
+Star Wars! His favourite character is Darth Vader because he really enjoys playing the bad guy. However, Bob is not a
+fool, he knows that the industry is ruthless. One mistake and your career is over! He is really worried that he can not
+play the same character over and over again as he will become too predictable. On the other hand, he also fears falling
+into the other extreme, i.e. playing several types of role without forging a clear identity. What should he do? Well,
+let's help him with some data analysis!
 
-**The Spectrum of Ratings: A Glimpse into Popularity**
+**The spectrum of ratings**
 
-Bob really wants to maximise the income from the films he plays in. Unfortunately, only a handful of films are able to make it to the box office. Indeed, in our dataset almost 90% of movies does not have a box-office revenue! Bob is still a newcomer to this industry and can not play in those big blockbusters yet. Nonetheless, he remembers why he wanted to become an actor in the first place. Even though money is important, Bob has always wanted to move people's hearts! 
+Bob really wants to maximise the income from the films he plays in. Unfortunately, only a handful of films are able to
+make it to the box office. Indeed, in the movie dataset almost 90% of movies do not have a box-office revenue!
+Bob is still a newcomer to this industry and can not play in those big blockbusters yet. Nonetheless, he remembers why
+he wanted to become an actor in the first place. Even though money is important, Bob's priority was to move people's hearts! 
 
-Therefore, let's have a look at the movies' rating. In our analysis, we choose the IMDb database. As we'll see, it's less about the extremes and more like a cozy middle part of the road party. 
+Therefore, let's have a look at the movies' ratings. In our analysis, we choose the IMDb database. As we'll see, it's less
+about the extremes and more like a cozy middle part of the road party. 
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/ratings_histogram.html"></iframe>
@@ -96,22 +103,25 @@ Therefore, let's have a look at the movies' rating. In our analysis, we choose t
   <iframe class="responsive-iframe" src="assets/plot/movie_votes.html"></iframe>
 </div>
 
-We can notice from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only a small number of movies receive a large number of votes.
+We can notice from the distribution of movie ratings that fewer movies receiving very low or very high ratings, with a
+slight tendency of voters to rate movies positively. The "number of movies over number of votes" plot tells us that only
+a small number of movies receive a large number of votes.
 
-What has influence over this popularity? Is it a memorable characters, or the star power of actors? Should Bob play the same type of character over and over again to create a sense of comfort in the public, or does he need to keep reinventing himself to surprise the audience?
-To uncover the best strategy for Bob, he needs to know what sort of roles he needs to play. Can he stick to play those menacing villains like Darth Vader during his whole career? But before we answer this question, we need to know what defines a "villain". Not in the philosophical sense but as a cliché! In other words, we need to extract the different tropes from our movies.
-
-<!-- 
-**Roles as a measure of actors' ability to reinvent themselves?**
-
-It could be tempting
+What has influence over this popularity? Is it memorable characters, or the star power of actors? Should Bob play the same
+type of character over and over again to create a sense of comfort in the public, or does he need to keep reinventing himself
+to surprise the audience? To uncover the best strategy for Bob, he needs to know what sort of roles he needs to play.
+Can he stick to play those menacing villains like Darth Vader during his whole career? Let's see how many characters actors
+usually play.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/actor_roles.html"></iframe>
 </div>
 
-We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
-It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone.  -->
+Only a few famous actors have plethora of multiple roles. Only 16% of actors had more than 5 roles. It turns out
+the movie industry's got a "type," and not many actors fit into it. The big names might be playing it safe in their
+cinematic comfort zone.
+
+#Luca stop
 
 ### A measure of an actor's preference relatively to the music industry
 
