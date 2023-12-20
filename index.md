@@ -28,13 +28,20 @@ this lattice of information to perhaps capture the essence of cinema typecasting
 
 ## The CMU Movie.. what ?
 The CMU Movie Summary Corpus is a rich corpus which contains multiple datasets related to movies, the characters in it, 
-corresponding actors and many other miscellaneous features. The [original publication](http://www.cs.CMU.edu/~ark/personas/)
-mentioned above used movie summaries with Latent Dirichlet Allocation to skillfully extract 100 personas and the distribution
-of personas for each character. This distribution is what we will use in our analysis further down.
+corresponding actors and many other miscellaneous features spanning on more than a hundred year of productions from the
+movie industry. The [original publication](http://www.cs.CMU.edu/~ark/personas/) mentioned above used movie summaries
+with Latent Dirichlet Allocation to skillfully extract 100 personas and the distribution of personas for each character.
+This distribution is what we will use in our analysis further down.
 
 We will also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
-they play in.
+they play in. We can visualize the genre distribution of movies in the pie chart below.
 
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/genre_pie.html"></iframe>
+</div>
+
+Something interesting emerging here is that movie genres are not very polarized. We do not have a couple of overwhelmingly
+big fractions of one type of movies and breadcrumbs around it.
 # LUCA STOP HERE
 
 ## How successful is the movie industry?
