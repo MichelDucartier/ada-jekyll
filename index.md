@@ -175,7 +175,7 @@ In this case, we gained a lot of information about the "mystery persona" **becau
 a couple of tropes**. In the other extreme, if an actor tends to play personas that are very uniform,
 then we would actually lose information about this "mystery persona".
 
-### Mutual Information Preference score of personas: 
+#### Mutual Information Preference score of personas: 
 
 With this key idea of information gain we design our first key metric: the **mutual information preference metric, MIP**. 
 The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the
@@ -208,7 +208,8 @@ The plot highlights the extremes: We have a lot more actors with high MIP scores
 or roles and tend to be more predictable in their role choices. The right spike presents us the specialists that have found 
 their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
 
-### Mutual Information Preference score of genres
+#### Mutual Information Preference score of genres
+**TODO : move cette partie après "Character tropes: success or visibility ?" ?**
 
 We apply roughly the same process on movie genres. For each actor, we recover all the movies they played in and the
 genre distribution of those movies. Using this information and the global genre distribution we compute an second MIP
@@ -225,7 +226,14 @@ raises questions about the forces that shape an actor's career trajectory. Is it
 certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of
 an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
 
-### guillaume part
+### The love calculator between an actor and a role
+
+Although Bob really likes to play the villain (like his idol Christopher Lee), he knows that he can not play this persona for his entire carreer. Even Christopher Lee, the embodiment of villainess, played a good guy like Sherlock Holmes! In general, even if they have a preference towards some personas, actors sometimes need to act out of their comfort zone. Are they more successful when they play out of their comfort zone? To determine if an actor is out of his comfort zone **for a given role**, the MIP metric is not enough.
+
+Let's use Christopher Lee as our example once again...
+**TODO**
+
+
 
 ### Fares plots and analysis
 
