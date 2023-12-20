@@ -45,6 +45,27 @@ movie industry. The [original publication](http://www.cs.CMU.edu/~ark/personas/)
 with Latent Dirichlet Allocation to skillfully extract 50 personas and the distribution of personas for each character.
 This distribution is what we will use in our analysis further down.
 
+### A dive into personas
+But what are personas exactly ? Personas, also called character tropes are those tried and true clichés that we can spot
+a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got
+the one-liners, these are the bread and butter of movie land and we just can't get enough of them. So personas are role
+or character archetypes. To get a more intuivtive feel of what they are exactly, we've run the original publication
+processing pipeline to extract the latent topics of different personas. These latent topics are linked to a list of the
+most frequent words that occur in them. Then, we apply a dimensionality reduction algorithm (t-SNE) that allows us to
+reduce those high dimensional vectors to 2 dimensions and visualize them. Here are a couple of character tropes visualized:
+
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/persona_scatter.html"></iframe>
+</div>
+
+We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this
+persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes,
+just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab",
+"threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping
+into a party where enemies are the uninvited guests...
+
+### Don't worry, we didn't forget about your favourite action movie star
+
 We will also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
 they play in. We can visualize the genre distribution of movies in the pie chart below.
 
@@ -54,6 +75,8 @@ they play in. We can visualize the genre distribution of movies in the pie chart
 
 Something interesting emerging here is that movie genres are not very polarized. We do not have a couple of overwhelmingly
 big fractions of one type of movies and breadcrumbs around them.
+
+# Luca STOP
 
 ## Unraveling the threads of cinematic success
 
@@ -89,21 +112,6 @@ It could be tempting
 
 We find out that there are only a few famous actors with multiple roles. Only 16% of actors had more than 5 roles.  
 It turns out Hollywood's got a "type," and many actors fit right into it. The big names might be playing it safe in their cinematic comfort zone.  -->
-
-
-### Tropes : Figurative or metaphorical personas
-
-Tropes are those tried and true clichés that we can spot a mile away. Whether it's the "over-the-top villain" with a maniacal laugh or the "quirky best friend" who's always got the one-liners, these are the bread and butter of movie land and we just can't get enough of them.
-
-### Stereotypes on Screen: The Tropes We Love to Recognize
-
-To find the most recurrent tropes in the movie industry, we use a Latent Dirichlet Allocation method described [here](https://aclanthology.org/P13-1035.pdf). This algorithm creates 50 personas and associates each of them with a list of words that appear frequently with those personas. Let's try look at those personas a little bit more closely! Every actor's role are associated with a vector of 50 components. Each component $i$ represent the "porportion" of persona $i$ represented in the given role. To visualize the meaning of different personas, we will use the [word2vec](https://arxiv.org/abs/1301.3781) representations of the most frequent words in a couple of generated tropes. Then, we use TSNE to reduce those high dimensional vectors to 2 dimensions in order to visualize them. Here are our results for a couple of tropes:
-
-<div class="container">
-  <iframe class="responsive-iframe" src="assets/plot/persona_scatter.html"></iframe>
-</div>
-
-We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes, just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab," "threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping into a party where enemies are the uninvited guests...
 
 ### A measure of an actor's preference relatively to the music industry
 
