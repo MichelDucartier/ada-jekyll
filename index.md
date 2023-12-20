@@ -2,7 +2,12 @@
 layout: post
 title: Unraveling the connections between actors and characters in movies
 subtitle: Brought to you by the Advanced Data Arsonists
+featured-img: assets/img/MIP.png
 ---
+<div class="FeaturedImgBanner" {% if page.featured-img %} style="background-image: url('{{ page.featured-img }}');" {% endif %}>
+    <!-- Include your post title, byline, date, and other info inside the header here. -->
+</div>
+
 ## Introduction 
 
 Movies, they're not just projections on a wall, they're emotional odysseys. Each scene, a heartbeat; every line, a thrill. The film industry isn't merely a storyteller, it's a maestro of the grand symphony of creativity and tradition, innovation and nostalgia.
