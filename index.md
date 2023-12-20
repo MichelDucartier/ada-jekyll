@@ -110,35 +110,45 @@ a small number of movies receive a large number of votes.
 What has influence over this popularity? Is it memorable characters, or the star power of actors? Should Bob play the same
 type of character over and over again to create a sense of comfort in the public, or does he need to keep reinventing himself
 to surprise the audience? To uncover the best strategy for Bob, he needs to know what sort of roles he needs to play.
-Can he stick to play those menacing villains like Darth Vader during his whole career? Let's see how many characters actors
-usually play.
+Can he stick to play those menacing villains like Darth Vader during his whole career?
+
+Let's see how many characters actors usually play.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/actor_roles.html"></iframe>
 </div>
 
-Only a few famous actors have plethora of multiple roles. Only 16% of actors had more than 5 roles. It turns out
+Only a few famous actors have plethora of multiple roles. Only 16% of actors have more than 5 roles. It turns out
 the movie industry's got a "type," and not many actors fit into it. The big names might be playing it safe in their
 cinematic comfort zone.
 
-#Luca stop
+### Character tropes: success or visibility ?
 
-### A measure of an actor's preference relatively to the music industry
+This bifurcation raises intriguing questions: Do more tropes equate to greater success, or simply greater visibility?
+Is the industry inclined to favor a selected group and to typecast actors, or do these actors possess an adaptive
+chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles
+more than others ? We defined metrics that help us understand to what extent actors prefer certain types of characters,
+or personas, in their careers.
 
-This bifurcation raises intriguing questions: Do more tropes equate to greater success, or simply greater visibility? Is the industry inclined to favor a selected group and to typecast actors, or do these actors possess an adaptive chameleon-like quality that lands them role after role, or simply actors tend to have a preference to play some roles more than others.. We defined metrics that help us understand to what extent actors prefer certain types of characters, or personas, in their careers.
-
-Conceptually, let's imagine that Alice takes a random role in our dataset and among the different personas that make up this role, she chooses one persona randomly with probabilities proportional to the proportion of the persona for this role (i.e if a role is 50% "bad guy" and 50% "big muscled guy", then Alice has 50% of chance to choose the "bad guy" persona and likewise for the "big muscled guy"). Our best shot to guess which persona she took would be to take the most represented persona:
+Conceptually, let's imagine that Alice takes a random role in our dataset and among the different personas that make up
+this role, she chooses one persona randomly with probabilities proportional to the proportion of the persona for this
+role (i.e if a role is 50% "bad guy" and 50% "big muscled guy", then Alice has 50% of chance to choose the "bad guy"
+persona and likewise for the "big muscled guy"). Our best shot to guess which persona she took would be to take the most
+represented persona:
 
 <div class="row">
   <div class="small-column">
-    <span class="helper"></span> <img src="assets/img/default_portrait.png" class="portrait-img" alt="DefaultPortrait" style="width:100% ">
+    <span class="helper"></span> <img src="assets/img/alice_portrait.jpg" class="portrait-img" alt="DefaultPortrait" style="width:100% ">
   </div>
   <div class="big-column">
     <iframe class="fixed-iframe" src="assets/plot/persona_global.html" ></iframe>  
   </div>
 </div>
 
-In our case, this would be the persona 50. The 5 most important verbs for this persona are: "put", "read", "drive", "stay" and "feel". We get the impression that we're dealing with a character with no personality, a generic character who is only there to fill the void on the screen. But now, let's suppose that I tell you that Christopher Lee (the one who played Count Dooku, one of Bob's favourite characters) is the one who played this role!
+In our case, this would be the persona 50. The 5 most important verbs for this persona are: "put", "read", "drive", "stay" and "feel".
+We get the impression that we're dealing with a character with no personality, a generic character who is only there to
+fill the void on the screen. But now, let's suppose that I tell you that Christopher Lee (the one who played Count Dooku,
+one of Bob's favourite characters) is the one who played this role!
 
 <div class="row">
   <div class="small-column">
@@ -150,14 +160,22 @@ In our case, this would be the persona 50. The 5 most important verbs for this p
 </div>
 
 
-Now our answer would be different because **we gained information about the mystery persona**. Indeed, Christopher Lee tends to always play the same persona: the bad guy! He is Count Dooku, Saruman, Dracula, ... If we look at the most represented personas for Christopher Lee, we see that Persona 36 and 34 are much more represented than the other ones. Here are the top verbs for both personas:
+Now our answer would be different because **we gained information about the mystery persona**. Indeed, Christopher Lee
+tends to always play the same persona: the bad guy! He is Count Dooku, Saruman, Dracula, ... If we look at the most
+represented personas for Christopher Lee, we see that Persona 36 and 34 are much more represented than the other ones.
+Here are the top verbs for both personas:
 - Persona 36: "go", "turn", "put", "throw", "reveal", "keep"
 - Persona 34: "recognize", "arrange", "place", "set", "invite", "threaten"
 
-Persona 36 seems to be a generic persona without too much obvious structure. However, persona 34 is much more interesting. Words like "threaten", "arrange", "place", "set" and "invite" suggest that this persona captures some sort of manipulative villain which is very fitting for an actor like Christopher Lee!
+Persona 36 seems to be a generic persona without too much obvious structure, though "turn" and "reveal" can indicate a key
+role. Persona 34 is much more interesting. Words like "threaten", "arrange", "place", "set" and "invite" suggest that
+this persona captures some sort of manipulative villain which is very fitting for an actor like Christopher Lee!
 
-In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles revolve around a couple of tropes**. In the other extreme, if an actor tends to play personas that are very uniform, then we would actually lose information about this "mystery persona"
+In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles revolve around
+a couple of tropes**. In the other extreme, if an actor tends to play personas that are very uniform,
+then we would actually lose information about this "mystery persona"
 
+# Luca Here
 
 ### Mutual Information Preference score of personas: 
 
