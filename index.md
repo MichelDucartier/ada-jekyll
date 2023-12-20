@@ -2,11 +2,7 @@
 layout: post
 title: Unraveling the connections between actors and characters in movies
 subtitle: Brought to you by the Advanced Data Arsonists
-featured-img: assets/img/MIP.png
 ---
-<div class="FeaturedImgBanner" {% if page.featured-img %} style="background-image: url('{{ page.featured-img }}');" {% endif %}>
-    <!-- Include your post title, byline, date, and other info inside the header here. -->
-</div>
 
 ## Introduction 
 
