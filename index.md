@@ -28,7 +28,7 @@ this lattice of information to perhaps capture the essence of cinema typecasting
 
 ## So many actors.. is the movie industry really that big ?
 Yes.. yes it is! The movie industry is very lucrative. To get a more intuitive feel about the amount of the money involved,
-let's compare the movies' revenue to something tangible such as a country's GDP for instance!
+let's compare the movies' revenue to something tangible such as a country's GDP for instance.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/box_office_vs_gdp.html"></iframe>
