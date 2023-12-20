@@ -25,10 +25,17 @@ patterns in who gets to play the hero, the villain, the casanova?
 
 Join us on this exclusive backstage pass as we lift the velvet curtains on this data. Together, we'll navigate through
 this lattice of information to perhaps capture the essence of cinema typecasting.
-<!---
 
-### Tiny description of what was done on the original paper ?
--->
+## The CMU Movie.. what ?
+The CMU Movie Summary Corpus is a rich corpus which contains multiple datasets related to movies, the characters in it, 
+corresponding actors and many other miscellaneous features. The [original publication](http://www.cs.CMU.edu/~ark/personas/)
+mentioned above used movie summaries with Latent Dirichlet Allocation to skillfully extract 100 personas and the distribution
+of personas for each character. This distribution is what we will use in our analysis further down.
+
+We will also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
+they play in.
+
+# LUCA STOP HERE
 
 ## How successful is the movie industry?
 
