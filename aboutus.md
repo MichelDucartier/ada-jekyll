@@ -8,4 +8,4 @@ Brought to you by the **Advanced Data Arsonists**
 - Syrine Noamen @ syrine.noamen@epfl.ch
 - Michael Zhang @ michael.zhang@epfl.ch
 - Guillaume Boyé @ guillaume.boye@epfl.ch
-- Fares Karry @ fares.karray@epfl.ch
+- Fares Karray @ fares.karray@epfl.ch
