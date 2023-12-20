@@ -26,11 +26,23 @@ patterns in who gets to play the hero, the villain, the casanova?
 Join us on this exclusive backstage pass as we lift the velvet curtains on this data. Together, we'll navigate through
 this lattice of information to perhaps capture the essence of cinema typecasting.
 
-## The CMU Movie.. what ?
+## So many actors.. is the movie industry really that big ?
+Yes.. yes it is! The movie industry is very lucrative. To get a more intuitive feel about the amount of the money involved,
+let's compare the movies' revenue to something tangible such as a country's GDP for instance!
+
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/box_office_vs_gdp.html"></iframe>
+</div>
+
+The annual box office of the entire film industry is roughly equivalent to Iceland's GDP! Keep in mind that this plot
+only takes into account the *box-office* revenue of the film industry. Other sources of revenues such as streaming platform
+or DVDs are not even counted in this plot. No wonder actors become so popular. Let's dive in, can actors make or break a movie?
+
+## But first, the CMU Movie.. what ?
 The CMU Movie Summary Corpus is a rich corpus which contains multiple datasets related to movies, the characters in it, 
 corresponding actors and many other miscellaneous features spanning on more than a hundred year of productions from the
 movie industry. The [original publication](http://www.cs.CMU.edu/~ark/personas/) mentioned above used movie summaries
-with Latent Dirichlet Allocation to skillfully extract 100 personas and the distribution of personas for each character.
+with Latent Dirichlet Allocation to skillfully extract 50 personas and the distribution of personas for each character.
 This distribution is what we will use in our analysis further down.
 
 We will also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
@@ -41,19 +53,7 @@ they play in. We can visualize the genre distribution of movies in the pie chart
 </div>
 
 Something interesting emerging here is that movie genres are not very polarized. We do not have a couple of overwhelmingly
-big fractions of one type of movies and breadcrumbs around it.
-# LUCA STOP HERE
-
-## How successful is the movie industry?
-
-But first we need to ask ourselves how big is this success? Is the movie industry as lucrative as we think? Or is it some petty money that does not deserve our attention... To get a more intuitive feel about the magnitude of the money involved, we need to compare the movies' revenue to something tangible such as a country's GDP for instance!
-
-<div class="container">
-  <iframe class="responsive-iframe" src="assets/plot/box_office_vs_gdp.html"></iframe>
-</div>
-
-
-By way of comparison, the annual box office of the entire film industry is equivalent to Iceland's GDP! Keep in mind that this plot only takes into account the *box-office* revenue of the film industry. Other sources of revenues such as streaming platform or DVDs are not even counted in this plot! But why are they so popular? What makes a good movie? Let's delve into what truly marks a film's success!
+big fractions of one type of movies and breadcrumbs around them.
 
 ## Unraveling the threads of cinematic success
 
