@@ -252,7 +252,11 @@ On the other hand, one of his other movies _the Mummy_ has genres **Horror**, **
   <iframe class="responsive-iframe" src="assets/plot/personas_kld_histogram.html"></iframe>
 </div>
 
-We use the same idea to compute the Kullback-Leibler divergence for the personas.
+We use the same idea to compute the Kullback-Leibler divergence for the personas. The plot for personas shows a very noisy Gaussian with a spike at 0. This may be explained by the fact that a lot of actors tend to play the same type of persona over and over again.
+
+#### So? What should Bob do?
+
+After those very long explanations, we are finally ready and set to answer our question!
 
 
 ### Fares plots and analysis
