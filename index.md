@@ -258,7 +258,16 @@ We use the same idea to compute the Kullback-Leibler divergence for the personas
 
 After those very long explanations, we are finally ready and set to answer our question!
 
+### OLS Guillaume
+
+To investigate whether there is a notable difference in the performance of movies when a certain actor steps out of his usual roles, we embark on a statistical journey, exploring how the specialization of actors in their roles (**`mip_trope`**) and their propensity to engage in familiar roles (**`trope_likelihood`**) impact a movie's reception, as measured by its average rating.  These are the two independent variables in Ordinary Least Square regression. that reflect the tendency of actor sticking to their comfort zones. 
+
+
+
+ **Plot twist:** Intuitively, we sensed that actors excelling in familiar roles potentially enhances a movie's performance. But, as any good story, there is a twist. The OLS revealed a negative correlation where comfort and specialization dragged down movie ratings with confidence intervals at  [-1.070, -0.885] and [-0.273, -0.230] respectively. Wait, there is more to find out here. The low R-squared value of 0.001 subtly suggests that there is more to the story.
+
+While **`mip_trope`** and **`trope_likelihood`** play a role on the movie ratings, they are not the main influencers. There's likely another key factor that might be an unseen confounder variable. This search of understanding never truly ends.
+
 
 ### Fares plots and analysis
-
 
