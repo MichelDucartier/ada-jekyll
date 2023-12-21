@@ -21,7 +21,7 @@ dimensions to the personas we explore.
 We're on a mission to spot actors that created comfort zones for themselves, our magnifying glass being our data analysis
 knowledge. Throughout this analysis, we will be zooming in on patterns, crunching numbers, and charting plots to uncover
 comfort zones in movie genres and in personas. We'll also take a peek behind the casting curtain to try and find hidden
-patterns in who gets to play the hero, the villain, the casanova?
+patterns in who gets to play the hero, the villain or the casanova.
 
 Join us on this exclusive backstage pass as we lift the velvet curtains on this data. Together, we'll navigate through
 this lattice of information to perhaps capture the essence of cinema typecasting.
@@ -66,7 +66,7 @@ into a party where enemies are the uninvited guests...
 
 ### Don't worry, we didn't forget about your favourite action movie star
 
-We also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres on movies
+We also focus on genre-based comfort zones, that is, actors that show recurrent patterns in the genres of the movies
 they play in. We can visualize the genre distribution of movies in the pie chart below.
 
 <div class="container">
@@ -185,10 +185,6 @@ with higher MIP scores tend to have a more specialized or distinctive selection 
 or a strong association with particular kinds of roles.
 In other words, MIP can tell us whether an actor's repertoire is not particularly special or stands out from the crowd.
 
-1. A MIP score of 1 signifies an actor with a singular focus
-2. An MIP score of 0 indicates an actor whose choices mirror the global distribution of roles or genres.
-3. Any value in-between reflects a polarization of a certain degree
-
 For each actor we have computed an "average persona", which is taken over all characters they played. We compute the MIP
 of this average persona and report the density of actors over MIP scores below.
 
@@ -196,7 +192,7 @@ of this average persona and report the density of actors over MIP scores below.
   <iframe class="responsive-iframe" src="assets/plot/mip_personas.html"></iframe>
 </div>
 
-As we can observe, the average persona's MIP score of actors tends to be around 0.4, meaning a relatively average polarisation of roles.
+How interesting! As we can observe, the average persona's MIP score of actors tends to be around 0.4, meaning a relatively average polarisation of roles.
 The histogram is bell-shaped with a substantial spread. This distribution indicates that while there's a strong central
 tendency — most actors have an average degree of persona specialization. The very high spike in density at 1 is due to
 actors for which the average persona was fully polarized, that is they only played a single persona accross their movies.
@@ -209,10 +205,9 @@ or roles and tend to be more predictable in their role choices. The right spike 
 their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
 
 #### Mutual Information Preference score of genres
-**TODO : move cette partie après "Character tropes: success or visibility ?" ?**
 
 We apply roughly the same process on movie genres. For each actor, we recover all the movies they played in and the
-genre distribution of those movies. Using this information and the global genre distribution we compute an second MIP
+genre distribution of those movies. Using this information and the global genre distribution we compute a second MIP
 score for each actor. Note that we don't need to use averages here, because this genre distribution is not affected by
 a particular movie, in contrast to personas which differ for each character within a given movie.
 
@@ -228,7 +223,11 @@ an industry that finds a formula and sticks to it, sometimes to the detriment of
 
 #### The love calculator between an actor and a role
 
-Although Bob really likes to play the villain (like his idol Christopher Lee), he knows that he can not play this persona for his entire carreer. Even Christopher Lee, the embodiment of villainess, played a good guy like Sherlock Holmes! In general, even if they have a preference towards some personas, actors sometimes need to act out of their comfort zone. Are they more successful when they play out of their comfort zone? To determine if an actor is out of his comfort zone **for a given role**, the MIP metric is not enough.
+Although Bob really likes to play the villain (like his idol Christopher Lee), he knows that he can not play this persona
+for his entire career. Even Christopher Lee, the embodiment of villains, played a good guy like Sherlock Holmes! In general,
+even if they have a preference towards some personas, actors sometimes act out of their comfort zone.
+Are they more successful when they play out of their comfort zone? To determine if an actor is out of his comfort zone
+**for a given role**, the MIP metric is not enough.
 
 Let's use Christopher Lee as our example once again but this time we will look at the genres that he plays. 
 
@@ -241,9 +240,16 @@ Let's use Christopher Lee as our example once again but this time we will look a
   </div>
 </div>
 
-Here we only plot the genres with more than 1% frequency in his filmography. He seems to have a clear tendency to play in Horror and Thriller like movies such as _Dracula_ (labeled as **Horror** and **Thriller** movies in our dataset). Since both of the most represented genres are included in _Dracula_, we can assume that Christopher Lee has some degree of comfort in playing in this movie.
+Here we only plot the genres with more than 1% frequency in his filmography. He seems to have a clear tendency to play
+in Horror and Thriller like movies such as _Dracula_. (labeled as **Horror** and **Thriller** movies in our dataset)
+Since both of the most represented genres are included in _Dracula_, we can assume that Christopher Lee has some degree
+of comfort in playing in this movie.
 
-On the other hand, one of his other movies _the Mummy_ has genres **Horror**, **Archeology** and **Monster movie**. **Archeology** and **Monster movie** don't even represent 1% of Christopher Lee's played genres. He clearly stepped out of his comfort zone for this role! The reasoning is that the distribution of genres for this movie is very "far" from the global distribution of Lee's genres. To quantify this notion of "distance", we use the relative entropy (also known as Kullback–Leibler divergence).
+On the other hand, one of his other movies _the Mummy_ has genres **Horror**, **Archeology** and **Monster movie**.
+**Archeology** and **Monster movie** don't even represent 1% of Christopher Lee's played genres. He clearly stepped
+out of his comfort zone for this role! The reasoning is that the distribution of genres for this movie is very *far*
+from the global distribution of Lee's genres. To quantify this notion of distance, we use the relative entropy, also
+known as Kullback–Leibler divergence.
 
 <div class="container">
   <iframe class="responsive-iframe" src="assets/plot/genres_kld_histogram.html"></iframe>
@@ -252,10 +258,12 @@ On the other hand, one of his other movies _the Mummy_ has genres **Horror**, **
   <iframe class="responsive-iframe" src="assets/plot/personas_kld_histogram.html"></iframe>
 </div>
 
-We use the same idea to compute the Kullback-Leibler divergence for the personas. The plot for personas shows a very noisy Gaussian with a spike at 0. This may be explained by the fact that a lot of actors tend to play the same type of persona over and over again.
+We use the same idea to compute the Kullback-Leibler divergence for the personas. The plot for personas shows a very
+noisy Gaussian with a spike at 0. This may be explained by the fact that a lot of actors tend to only have a few roles
+for which they were typecast into the same persona.
 
 #### So? What should Bob do?
-
+# Luca stopped here
 After those very long explanations, we are finally ready and set to answer our question!
 
 ### OLS Guillaume
