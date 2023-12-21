@@ -175,7 +175,7 @@ In this case, we gained a lot of information about the "mystery persona" **becau
 a couple of tropes**. In the other extreme, if an actor tends to play personas that are very uniform,
 then we would actually lose information about this "mystery persona".
 
-#### Mutual Information Preference score of personas: 
+### Mutual Information Preference score of personas: 
 
 With this key idea of information gain we design our first key metric: the **mutual information preference metric, MIP**. 
 The MIP score for each trope distribution reveals how closely an actor's choices align with, or diverge from, the
@@ -204,7 +204,7 @@ The plot highlights the extremes: We have a lot more actors with high MIP scores
 or roles and tend to be more predictable in their role choices. The right spike presents us the specialists that have found 
 their niche. We naturally ask: Do these specialization trends observed in persona choices also mirror the genres that actors are drawn to?
 
-#### Mutual Information Preference score of genres
+### Mutual Information Preference score of genres
 
 We apply roughly the same process on movie genres. For each actor, we recover all the movies they played in and the
 genre distribution of those movies. Using this information and the global genre distribution we compute a second MIP
@@ -221,7 +221,7 @@ raises questions about the forces that shape an actor's career trajectory. Is it
 certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of
 an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
 
-#### The love calculator between an actor and a role
+### The love calculator between an actor and a role
 
 Although Bob really likes to play the villain (like his idol Christopher Lee), he knows that he can not play this persona
 for his entire career. Even Christopher Lee, the embodiment of villains, played a good guy like Sherlock Holmes! In general,
@@ -262,9 +262,14 @@ We use the same idea to compute the Kullback-Leibler divergence for the personas
 noisy Gaussian with a spike at 0. This may be explained by the fact that a lot of actors tend to only have a few roles
 for which they were typecast into the same persona.
 
-#### So? What should Bob do?
-# Luca stopped here
-After those very long explanations, we are finally ready and set to answer our question!
+### So? What should Bob do?
+
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/img/two_hrs_later.jpg"></iframe>
+</div>
+
+Ah yes! Bob! We totally didn't forget him after those very long explanations. Let's try to help him out and provide some
+answers.
 
 ### OLS Guillaume
 
