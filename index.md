@@ -271,7 +271,7 @@ for which they were typecast into the same persona.
 Ah yes! Bob! We totally didn't forget him after those very long explanations. Let's try to help him out and provide some
 answers.
 
-### OLS Guillaume
+### The relationship between personas, genres, and movie performance
 
 To investigate whether there is a notable difference in the performance of movies when a certain actor steps out of his
 usual roles, we embark on a statistical journey, exploring how the specialization of actors in their roles
@@ -282,8 +282,22 @@ comfort zone.
 
 # TODO ADD HEATMAP/HIST2D HERE WE MISS A VISUALIZATION
 
-**Plot twist:** Intuitively, we sensed that actors excelling in familiar roles potentially enhances a movie's performance.
-But, as any good story, there is a twist. The OLS revealed a negative correlation where comfort and specialization dragged
+This attempt at predicting movie performance was done through ordinary least squares regression, a mouthful often times
+referred to as OLS. The results show that indeed, a higher MIP value for personas, indicative of more specialized actors,
+appears to positively impact movie performance. Conversely, engaging in familiar roles correlates positively with a
+movie's success.  
+Great! Let's go then, I already have a gift idea for Bob. Also, shush! Don't tell him it's a lightsaber, he might get too excited
+and pass out..  
+Well, not so fast, the coefficients that determine this relationship are *low*, and only explain about 1% of the variance
+in a movie's success. Bummer.  
+
+Maybe we'll be more lucky by switching gear to genres ?
+
+# TODO
+
+Here comes the plot twist, intuitively, we sensed that actors excelling in familiar roles potentially enhances a movie's
+performance, as this actor is used to a certain personas and knows the various quirks to make it work. But, as in any good
+story, there is a twist. The regression revealed a negative correlation where comfort and specialization dragged
 down movie ratings with confidence intervals at  [-1.070, -0.885] and [-0.273, -0.230] respectively. Wait, there is more to
 find out here. The low R-squared value of 0.001 subtly suggests that there is more to the story.
 
