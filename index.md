@@ -226,13 +226,33 @@ raises questions about the forces that shape an actor's career trajectory. Is it
 certain types of stories that resonates with their own artistic voice? Or does it reflect the typecasting tendencies of
 an industry that finds a formula and sticks to it, sometimes to the detriment of creative diversity?
 
-### The love calculator between an actor and a role
+#### The love calculator between an actor and a role
 
 Although Bob really likes to play the villain (like his idol Christopher Lee), he knows that he can not play this persona for his entire carreer. Even Christopher Lee, the embodiment of villainess, played a good guy like Sherlock Holmes! In general, even if they have a preference towards some personas, actors sometimes need to act out of their comfort zone. Are they more successful when they play out of their comfort zone? To determine if an actor is out of his comfort zone **for a given role**, the MIP metric is not enough.
 
-Let's use Christopher Lee as our example once again...
-**TODO**
+Let's use Christopher Lee as our example once again but this time we will look at the genres that he plays. 
 
+<div class="row">
+  <div class="small-column">
+    <span class="helper"></span> <img src="assets/img/christopher_lee.png" class="portrait-img" alt="DefaultPortrait" style="width:100% ">
+  </div>
+  <div class="big-column">
+    <iframe class="fixed-iframe" src="assets/plot/christopher_lee_genres.html" ></iframe>  
+  </div>
+</div>
+
+Here we only plot the genres with more than 1% frequency in his filmography. He seems to have a clear tendency to play in Horror and Thriller like movies such as _Dracula_ (labeled as **Horror** and **Thriller** movies in our dataset). Since both of the most represented genres are included in _Dracula_, we can assume that Christopher Lee has some degree of comfort in playing in this movie.
+
+On the other hand, one of his other movies _the Mummy_ has genres **Horror**, **Archeology** and **Monster movie**. **Archeology** and **Monster movie** don't even represent 1% of Christopher Lee's played genres. He clearly stepped out of his comfort zone for this role! The reasoning is that the distribution of genres for this movie is very "far" from the global distribution of Lee's genres. To quantify this notion of "distance", we use the relative entropy (also known as Kullback–Leibler divergence).
+
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/genres_kld_histogram.html"></iframe>
+</div>
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/plot/personas_kld_histogram.html"></iframe>
+</div>
+
+We use the same idea to compute the Kullback-Leibler divergence for the personas.
 
 
 ### Fares plots and analysis
