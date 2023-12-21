@@ -269,5 +269,71 @@ To investigate whether there is a notable difference in the performance of movie
 While **`mip_trope`** and **`trope_likelihood`** play a role on the movie ratings, they are not the main influencers. There's likely another key factor that might be an unseen confounder variable. This search of understanding never truly ends.
 
 
-### Fares plots and analysis
+### OLS Fares
 
+We started by organizing movie characters into groups based on their characteristics, creating clusters of characters with similar personalities. Our goal was to see if physical features of actors, like gender, have any effect on how successful their movies are, judged by average movie ratings.
+
+For each character group, we separately studied the impact of these actor features. This approach helps us see if the influence of these features changes depending on the type of characters in the movies.
+
+To decide the best number of character groups, we used a technique called the elbow method. Then, we employed a statistical method known as Ordinary Least Squares (OLS) to investigate how gender, as a characteristic of actors, relates to movie ratings. Here's a summary of what we found from this analysis.
+
+
+
+| Cluster | R-squared | Coeff  | p-value  |
+|---------|-----------|--------|----------|
+| 0       | 0.000     | -0.0266| 0.703    |
+| 1       | 0.002     | 0.1572 | 0.115    |
+| 2       | 0.002     | 0.0800 | 0.0166   |
+| 3       | 0.004     | 0.2133 | 0.00262  |
+| 4       | 0.001     | 0.0718 | 0.000018 |
+| 5       | 0.000     | 0.0374 | 0.258    |
+| 6       | 0.001     | 0.0613 | 0.272    |
+
+
+
+The results show that gender doesn't have a consistent or strong impact on how movies are rated across different character groups. Even though we sometimes found notable results, they were not reliable across the board. The low R-squared values from our analysis indicate that gender, as a factor, doesn't play a significant role in determining a movie's average rating. Basically, gender doesn't seem to be a major factor in how well a movie is received by audiences.
+After focusing on gender, we turned our attention to the impact of an actor's height on movie success. We first refined our dataset, removing any entries where the actor's height wasn't available. Using the same clustering technique, we explored how the height of an actor might influence the average ratings of movies within each character group.
+
+
+| Cluster | R-squared | Coeff   | p-value |
+|---------|-----------|---------|---------|
+| 0       | 0.000     | -0.1684 | 0.520   |
+| 1       | 0.000     | 0.0655  | 0.843   |
+| 2       | 0.001     | 0.0029  | 0.191   |
+| 3       | 0.000     | -0.1288 | 0.485   |
+| 4       | 0.000     | 0.0426  | 0.607   |
+| 5       | 0.001     | -0.3115 | 0.224   |
+
+
+
+The analysis using OLS regression shows that the height of an actor has virtually no effect on the average movie ratings. The R-squared value of 0.000 tells us that actor height doesn't account for any variation in movie ratings. Furthermore, the coefficient for actor height is almost zero, indicating that even a considerable increase in height (by one meter) doesn't significantly impact a movie's success.
+
+In essence, across all character clusters, an actor's height doesn't affect how well a movie is received. A taller actor does not necessarily lead to higher movie ratings. Thus, the influence of an actor's height on a movie's average rating is minimal to nonexistent.
+
+To sum up, our findings suggest that neither the gender nor the height of actors significantly affects the average ratings of movies. These physical characteristics of actors don't appear to play a crucial role in the success of a movie.
+
+
+
+
+
+# Conclusion:
+
+ Bob's Big Break: We embarked on a captivating Journey Through Movie Magic
+
+*Unveiling patterns in Genres and Personas*
+
+We meticulously computed each actor's distribution across movie genres and personas then visualizing the polarization within each category, identifying actors who consistently gravitate towards specfic roles or those who embrace a spectrum of characters.
+
+*Age and Persona: Bob's Future Forecast*
+
+Bob wonders, "Will I still be playing villains when I'm 60?" So, we peeked into the future, tracking how actors' roles change as they age. Our findings? Actors' roles shift while painting a picture of an ever-changing landscape
+
+*Bob was wondering if he should risk it all for different roles?* 
+
+To answer Bob, we used the Kullback-Leibler (KL) divergence to measure the variety in an actor's roles, and applied correlation with movie ratings. This approach enabled us to assess whether stepping outside of comfort zones had a tangible impact on a film's success.
+
+*Bob's Ethnicity Enigma*
+
+Bob was curious about how his background might shape his roles. So we grouped characters like pieces in a puzzle, looking for patterns in ethnicity and roles. It's a colorful palette, showing how diverse backgrounds bring different flavors to the screen.
+
+As we close the curtains on this data-driven odyssey, we leave you and Bob with a high appreciation for the art of cinema and a curiosity to further explore the ever-evolving relationship between actors and the characters they embody. May the roles of aspiring actors out there, especially our friend Bob be as rich and varied as the movies we love! 
