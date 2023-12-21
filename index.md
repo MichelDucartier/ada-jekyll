@@ -291,18 +291,18 @@ and pass out..
 Well, not so fast, the coefficients that determine this relationship are *low*, and only explain about 1% of the variance
 in a movie's success. Bummer.  
 
-Maybe we'll be more lucky by switching gear to genres ?
+Maybe we'll be more lucky by switching gear to genres ? Actually, not *exactly*.. As in any good story, there's a plot
+twist. Intuitively, we sensed that actors excelling in a familiar type of movies would enhance a movie's
+performance, as this actor is used to this genre and knows the various quirks that make it work. But, the regression revealed
+a negative correlation where comfort and specialization dragged down movie ratings! Fortunately, those coefficients only
+explain about 1% of the variance in a movie's success, so they don't impact it too much.
 
-# TODO
+Clearly, the polarization of personas and genres have an effect on a movie's performance, as the p-values of the found
+coefficients are all very near 0. However, they are not the main influencers *at all*. There's likely another key factor
+that might be an unseen confounder variable, such as movie quality, the budget in marketing expenses, etc.
+This search of understanding never truly ends.
 
-Here comes the plot twist, intuitively, we sensed that actors excelling in familiar roles potentially enhances a movie's
-performance, as this actor is used to a certain personas and knows the various quirks to make it work. But, as in any good
-story, there is a twist. The regression revealed a negative correlation where comfort and specialization dragged
-down movie ratings with confidence intervals at  [-1.070, -0.885] and [-0.273, -0.230] respectively. Wait, there is more to
-find out here. The low R-squared value of 0.001 subtly suggests that there is more to the story.
-
-While **`mip_trope`** and **`trope_likelihood`** play a role on the movie ratings, they are not the main influencers.
-There's likely another key factor that might be an unseen confounder variable. This search of understanding never truly ends.
+# Luca stopped here
 
 ### OLS Fares
 
