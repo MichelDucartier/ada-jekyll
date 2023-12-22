@@ -347,6 +347,45 @@ In essence, across all character clusters, an actor's height doesn't affect how 
 
 To sum up, our findings suggest that neither the gender nor the height of actors significantly affects the average ratings of movies. These physical characteristics of actors don't appear to play a crucial role in the success of a movie.
 
+### Ethnicity
+
+Bob was concerned about whether his ethnic background could influence the types of roles he's offered in movies and might limit him to certain roles he didn't want to play. 
+To address his concerns, we conducted an analysis to determine if an actor's ethnic origins have an effect on the variety of characters and identities they are typically cast as.
+We started by cleaning our dataset to exclude actors without listed ethnicities. Then, we grouped actors together, calculating the average of the character tropes they played. We generated a new dataframe for each persona , which showed the ethnic backgrounds of actors and their related persona trope. 
+
+Our OLS analysis yielded intriguing insights into the relationship between ethnicities and personas. For instance, Persona 35 showed no clear dependence on ethnicity. (could not describe the persona in any way ...) 
+
+Conversely, the 'Elder Believing, Revealing, Uniting' persona demonstrated a notable association with certain ethnicities, as detailed in the following table.
+
+| Ethnicity        | Coefficient | p-value |
+|------------------|-------------|---------|
+| Hindu            | 0.4510      | 0.000   |
+| Dogra            | 0.6210      | 0.000   |
+| Mangaloreans     | 0.3921      | 0.001   |
+| Hindkowans       | 0.3548      | 0.002   |
+| Finns            | 0.3644      | 0.000   |
+
+In contrast, the 'Aggressive Villain' persona, often linked with themes of terrorism, murder, stabbing, hitting, and killing, showed a stronger connection to specific ethnic groups, as indicated in the accompanying table.
+
+| Ethnicity          | Coefficient | p-value |
+|--------------------|-------------|---------|
+| Tamil American     | 0.7882      | <0.001  |
+| Belgians           | 0.7782      | <0.001  |
+| Moroccans          | 0.5482      | <0.001  |
+| Sephardi Jews      | 0.4249      | <0.001  |
+| Afro-Asian         | 0.3932      | <0.001  |
+| Portuguese people  | 0.3882      | <0.001  |
+
+Furthermore, personas linked with elements of magic, ghosts, evil, and summoning also displayed a higher association with particular ethnic backgrounds.
+
+| Ethnicity           | Coefficient | p-value |
+|---------------------|-------------|---------|
+| Albanian American   | 0.1924      | <0.001  |
+| Irish Canadian      | 0.1214      | 0.000   |
+| Hong Kong people    | 0.0271      | 0.024   |
+| Dominican American  | 0.0639      | 0.022   |
+
+
 
 
 
@@ -372,3 +411,4 @@ To answer Bob, we used the Kullback-Leibler (KL) divergence to measure the varie
 Bob was curious about how his background might shape his roles. So we grouped characters like pieces in a puzzle, looking for patterns in ethnicity and roles. It's a colorful palette, showing how diverse backgrounds bring different flavors to the screen.
 
 As we close the curtains on this data-driven odyssey, we leave you and Bob with a high appreciation for the art of cinema and a curiosity to further explore the ever-evolving relationship between actors and the characters they embody. May the roles of aspiring actors out there, especially our friend Bob be as rich and varied as the movies we love! 
+
