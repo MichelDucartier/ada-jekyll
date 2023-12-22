@@ -391,30 +391,34 @@ Furthermore, personas linked with elements of magic, ghosts, evil, and summoning
 | Dominican American  | 0.0639      | 0.022   |
 
 
-# Conclusion:
+## Conclusion:
 
 The movie industry is getting bigger every day. More and more actors work in the field, with each of them playing different
 but recurring roles. We were on a mission to discover the various comfort zones that actors created themselves over the years.
-What we can for sure is that they exist, both in terms of genre and personas. Using home-brew metrics, we show what proportion
-of actors are/aren't polarized.
+What we can for sure is that they exist, both in terms of genre and personas. We meticulously computed each actor's distribution
+across movie genres and personas to apply home-brew metrics that show what proportion of actors are/aren't polarized.  
+Then we used the KL-divergence to assess whether polarization of actors impacted the performance of movies. We've shown
+that there is a correlation, but it is small, and clearly not the root cause behind a movie's success.
+Finally, since Bob was curious about how his background might shape his roles. We performed extra regressions looking for
+patterns between actor features and movie performance and show that ethnicity does not seem to impact a movie's performance.
+The last question we've explored was the impact of ethnicity on actor persona, to again uncover hidden biases in castings.
+We provide some rankings which show what group is the most typecast for a given role.
 
-## Luca Stop here
+In conclusion, this analysis has been insightful to uncover some trends and recurrent behaviors in the acting world. It
+is important to mention some limitations we faced. First and foremost, the personas generated in the original publication are
+somewhat hard to really interpret correctly. Most of our conclusions are subject to this observation and lessen the interpretability
+of our results.
 
-*Unveiling patterns in Genres and Personas*
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/img/personas_meme.jpg"></iframe>
+</div>
 
-We meticulously computed each actor's distribution across movie genres and personas then visualizing the polarization within each category, identifying actors who consistently gravitate towards specfic roles or those who embrace a spectrum of characters.
+Also, when uncovering link between actor features and typecasting/movie-revenue, we would have liked to
+take into account more potential confounders. We definitely tried to bite off more than we could chew.
 
-*Age and Persona: Bob's Future Forecast*
+Notwithstanding, may the roles of aspiring actors out there, especially our friend Bob, be as rich and varied as the movies we love!
 
-Bob wonders, "Will I still be playing villains when I'm 60?" So, we peeked into the future, tracking how actors' roles change as they age. Our findings? Actors' roles shift while painting a picture of an ever-changing landscape
-
-*Bob was wondering if he should risk it all for different roles?* 
-
-To answer Bob, we used the Kullback-Leibler (KL) divergence to measure the variety in an actor's roles, and applied correlation with movie ratings. This approach enabled us to assess whether stepping outside of comfort zones had a tangible impact on a film's success.
-
-*Bob's Ethnicity Enigma*
-
-Bob was curious about how his background might shape his roles. So we grouped characters like pieces in a puzzle, looking for patterns in ethnicity and roles. It's a colorful palette, showing how diverse backgrounds bring different flavors to the screen.
-
-As we close the curtains on this data-driven odyssey, we leave you and Bob with a high appreciation for the art of cinema and a curiosity to further explore the ever-evolving relationship between actors and the characters they embody. May the roles of aspiring actors out there, especially our friend Bob be as rich and varied as the movies we love! 
-
+## References
+[1] Learning Latent Personas of Film Characters  
+David Bamman, Brendan O'Connor, and Noah A. Smith  
+ACL 2013, Sofia, Bulgaria, August 2013 
