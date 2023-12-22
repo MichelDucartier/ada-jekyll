@@ -300,13 +300,11 @@ a negative correlation where comfort and specialization dragged down movie ratin
 explain about 1% of the variance in a movie's success, so they don't impact it too much.
 
 Clearly, the polarization of personas and genres have an effect on a movie's performance, as the p-values of the found
-coefficients are all very near 0. However, they are not the main influencers *at all*. There's likely another key factor
+coefficients are all very near 0. However, they are not the main influences *at all*. There's likely another key factor
 that might be an unseen confounder variable, such as movie quality, the budget in marketing expenses, etc.
 This search of understanding never truly ends.
 
-# Luca stopped here
-
-### OLS Fares
+### OLS Fares [Luca stopped polish above]
 
 We started by organizing movie characters into groups based on their characteristics, creating clusters of characters with similar personalities. Our goal was to see if physical features of actors, like gender, have any effect on how successful their movies are, judged by average movie ratings.
 
@@ -388,13 +386,14 @@ Furthermore, personas linked with elements of magic, ghosts, evil, and summoning
 | Dominican American  | 0.0639      | 0.022   |
 
 
-
-
-
-
 # Conclusion:
 
- Bob's Big Break: We embarked on a captivating Journey Through Movie Magic
+The movie industry is getting bigger every day. More and more actors work in the field, with each of them playing different
+but recurring roles. We were on a mission to discover the various comfort zones that actors created themselves over the years.
+What we can for sure is that they exist, both in terms of genre and personas. Using home-brew metrics, we show what proportion
+of actors are/aren't polarized.
+
+## Luca Stop here
 
 *Unveiling patterns in Genres and Personas*
 
