@@ -285,7 +285,9 @@ To this end we try to predict how well a movie's going to perform using the MIP 
 and the Kullback-Leibler divergence of that particular persona, which encapsulates how far this actor went out of his
 comfort zone.
 
-# TODO ADD HEATMAP/HIST2D HERE WE MISS A VISUALIZATION
+<div class="container">
+  <iframe class="responsive-iframe" src="assets/img/KL_heatmap.png"></iframe>
+</div>
 
 This attempt at predicting movie performance was done through ordinary least squares regression, a mouthful often times
 referred to as OLS. The results show that indeed, a higher MIP value for personas, indicative of more specialized actors,
