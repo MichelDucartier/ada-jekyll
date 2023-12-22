@@ -467,13 +467,16 @@ coefficients are all very near 0. However, they are not the main influences *at 
 that might be an unseen confounder variable, such as movie quality, the budget in marketing expenses, etc.
 This search of understanding never truly ends.
 
-### OLS Fares [Luca stopped polish above]
+### The effect of genre on a movie's success
 
-We started by organizing movie characters into groups based on their characteristics, creating clusters of characters with similar personalities. Our goal was to see if physical features of actors, like gender, have any effect on how successful their movies are, judged by average movie ratings.
+To deepen our understanding, we nos focus on predicting a movie's success using some actor features. We started by
+putting movie characters into groups based on their persona, creating clusters of characters with similar personalities.
+Our goal was to see if physical features of actors, like gender, have any effect on how successful their movies are,
+given that they have roughly the same role (same persona).
 
-For each character group, we separately studied the impact of these actor features. This approach helps us see if the influence of these features changes depending on the type of characters in the movies.
-
-To decide the best number of character groups, we used a technique called the elbow method. Then, we employed a statistical method known as Ordinary Least Squares (OLS) to investigate how gender, as a characteristic of actors, relates to movie ratings. Here's a summary of what we found from this analysis.
+For each character group, we separately studied the impact of these actor features. This approach helps us see if the
+influence of these features changes depending on the type of characters in the movies. We employ OLS again to investigate
+how gender, as a characteristic of actors, relates to movie ratings. Here's a summary of what we found from this analysis.
 
 
 
@@ -487,27 +490,13 @@ To decide the best number of character groups, we used a technique called the el
 | 5       | 0.000     | 0.0374 | 0.258    |
 | 6       | 0.001     | 0.0613 | 0.272    |
 
+The results show that gender doesn't have a consistent or strong impact on how movies are rated across different character
+groups. Even though we sometimes found notable results, they were not reliable across the board. The low R-squared values
+from our analysis indicate that gender, as a factor, doesn't play a significant role in determining a movie's average rating.
+In short, gender doesn't seem to be a major factor in how well a movie is received by audiences.
 
-
-The results show that gender doesn't have a consistent or strong impact on how movies are rated across different character groups. Even though we sometimes found notable results, they were not reliable across the board. The low R-squared values from our analysis indicate that gender, as a factor, doesn't play a significant role in determining a movie's average rating. In short, gender doesn't seem to be a major factor in how well a movie is received by audiences.
-
-
-<!-- | Cluster | R-squared | Coeff   | p-value |
-|---------|-----------|---------|---------|
-| 0       | 0.000     | -0.1684 | 0.520   |
-| 1       | 0.000     | 0.0655  | 0.843   |
-| 2       | 0.001     | 0.0029  | 0.191   |
-| 3       | 0.000     | -0.1288 | 0.485   |
-| 4       | 0.000     | 0.0426  | 0.607   |
-| 5       | 0.001     | -0.3115 | 0.224   |
-
-
-
-The analysis using OLS regression shows that the height of an actor has virtually no effect on the average movie ratings. The R-squared value of 0.000 tells us that actor height doesn't account for any variation in movie ratings. Furthermore, the coefficient for actor height is almost zero, indicating that even a considerable increase in height (by one meter) doesn't significantly impact a movie's success.
-
-In essence, across all character clusters, an actor's height doesn't affect how well a movie is received. A taller actor does not necessarily lead to higher movie ratings. Thus, the influence of an actor's height on a movie's average rating is minimal to nonexistent. -->
-
-To sum up, our findings suggest that neither the gender doesn't significantly affect the average ratings of movies. This characteristic of actors doesn't appear to play a crucial role in the success of a movie.
+To sum up, our findings suggest that the gender doesn't significantly affect the average ratings of movies, so this
+characteristic of actors doesn't appear to play a crucial role in the success of a movie.
 
 ### Ethnicity
 
@@ -673,7 +662,7 @@ Indian people of our dataset play in Bollywood movies, there is a high chance th
 And Bob? Well Bob can be assured! Those are the only personas that present a significant correlation with ethnicities.
 Thus Bob can pretty much play any roles that he likes!
 
-## Conclusion:
+## Conclusion
 
 The movie industry is getting bigger every day. More and more actors work in the field, with each of them playing different
 but recurring roles. We were on a mission to discover the various comfort zones that actors created themselves over the years.
