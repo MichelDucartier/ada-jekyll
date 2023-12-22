@@ -511,11 +511,13 @@ To sum up, our findings suggest that neither the gender doesn't significantly af
 
 ### Ethnicity
 
-Bob was concerned about whether his ethnic background could influence the types of roles he's offered in movies and might limit him to certain roles he didn't want to play. 
-To address his concerns, we conducted an analysis to determine if an actor's ethnic origins have an effect on the variety of characters and identities they are typically cast as.
-We started by cleaning our dataset to exclude actors without listed ethnicities. Then, we grouped actors together, calculating the average of the character tropes they played. We generated a new dataframe for each persona , which showed the ethnic backgrounds of actors and their related persona trope. 
+Bob was concerned about whether his ethnic background could influence the types of roles he's offered in movies and might 
+limit him to certain roles he didn't want to play. To address his concerns, we conducted an analysis to determine if an
+actor's ethnic background have an effect on the variety of characters and identities they are typically cast as.
+We started by cleaning our dataset to exclude actors without listed ethnicities. Then, we grouped actors together, calculating
+the average of the character tropes they played. So for each persona, we have all actor ethnic backgrounds.
 
-To our, two personas stood out as being heavily influenced by actors' ethnicities! Those personas are Persona 4 and Persona 37: 
+To our surprise, two personas stood out as being heavily influenced by actors' ethnicities! Those personas are Persona 4 and Persona 37: 
 <table>
 <tr>
 <th> Persona 4 </th>
@@ -656,13 +658,20 @@ To our, two personas stood out as being heavily influenced by actors' ethnicitie
 </tr>
 </table>
 
-Respectively 28% and 15% of the variance on those personas are explained by the ethnicities. What's more? The most impactful ethnicity is the same for both personas! Can you guess which one? Let's have a look at those personas. Both of them seem to be drama-related. Persona 4 seem to have some degree of connection to family drama as "orphan", "mom" and "elder" are common attributes for this trope. This persona is "united" with people, "meets" and "likes" others. Persona 37 is "mysterious" and seems to play a role where age is important as "younger" and "older" are both common attributes for this persona. There is one big movie industry that loves those family-centered stories, melodramas and romance... 
+Respectively 28% and 15% of the variance on those personas are explained by the ethnicities. What's more? The most impactful
+ethnicity is the same for both personas! Can you guess which one? Let's have a look at those personas. Both of them seem
+to be drama-related. Persona 4 seem to have some degree of connection to family drama as "orphan", "mom" and "elder" are
+common attributes for this trope. This persona is "united" with people, "meets" and "likes" others. Persona 37 is "mysterious"
+and seems to play a role where age is important as "younger" and "older" are both common attributes for this persona. There
+is one big movie industry that loves those family-centered stories, melodramas and romance... 
 
-Bollywood! Persona 4 has roughly 19% more proportion among roles played by Indian people and 8% for Persona 37. Moreover, both of those p-values are very close to 0 meaning that this correlation is significant.
-Those correlations with the Indian ethnicities don't necessarily imply causality between the Indian ethnicity and those personas. As most of the Indian people of our dataset play in Bollywood movies, there is a high chance that we actually uncovered tropes of Bollywood scenarios!
+Bollywood! Persona 4 has roughly 19% more proportion among roles played by Indian people and 8% for Persona 37. Moreover,
+both of those p-values are very close to 0 meaning that this correlation is significant. Those correlations with the
+Indian ethnicities don't necessarily imply causality between the Indian ethnicity and those personas. As most of the
+Indian people of our dataset play in Bollywood movies, there is a high chance that we actually uncovered tropes of Bollywood scenarios!
 
-And Bob? Well Bob can be assured! Those are the only personas that present a significant correlation with ethnicities. Thus Bob can pretty much play any roles that he likes! 
-
+And Bob? Well Bob can be assured! Those are the only personas that present a significant correlation with ethnicities.
+Thus Bob can pretty much play any roles that he likes!
 
 ## Conclusion:
 
@@ -675,7 +684,7 @@ that there is a correlation, but it is small, and clearly not the root cause beh
 Finally, since Bob was curious about how his background might shape his roles. We performed extra regressions looking for
 patterns between actor features and movie performance and show that ethnicity does not seem to impact a movie's performance.
 The last question we've explored was the impact of ethnicity on actor persona, to again uncover hidden biases in castings.
-We provide some rankings which show what group is the most typecast for a given role.
+We provide some insights into the Bollywood scene and show the typical persona that is the most typecast in this context.
 
 In conclusion, this analysis has been insightful to uncover some trends and recurrent behaviors in the acting world. It
 is important to mention some limitations we faced. First and foremost, the personas generated in the original publication are
