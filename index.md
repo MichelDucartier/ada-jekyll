@@ -150,9 +150,25 @@ represented persona:
   </div>
 </div>
 
-In our case, this would be the persona 50. The 5 most important verbs for this persona are: "put", "read", "drive", "stay" and "feel".
+In our case, this would be the persona 50.
+
+**Most important words for persona 50:**
+
+| agent   | patient   | modifiee   |
+|:--------|:----------|:-----------|
+| put     | reject    | close      |
+| read    | apologize | elder      |
+| drive   | know      | orphan     |
+| stay    | spend     | mom        |
+| feel    | come      | other      |
+| arrive  | lose      | lover      |
+| meet    | stop      | dead       |
+| accept  | help      | former     |
+| believe | wait      | angry      |
+| think   | confront  | new        |
+
 We get the impression that we're dealing with a character with no personality, a generic character who is only there to
-fill the void on the screen. But now, let's suppose that I tell you that Christopher Lee (the one who played Count Dooku,
+fill the void on the screen. But now, let's suppose that we know that Christopher Lee (the one who played Count Dooku,
 one of Bob's favourite characters) is the one who played this role!
 
 <div class="row">
@@ -168,12 +184,154 @@ one of Bob's favourite characters) is the one who played this role!
 Now our answer would be different because **we gained information about the mystery persona**. Indeed, Christopher Lee
 tends to always play the same persona: the bad guy! He is Count Dooku, Saruman, Dracula, ... If we look at the most
 represented personas for Christopher Lee, we see that Persona 36 and 34 are much more represented than the other ones.
-Here are the top verbs for both personas:
-- Persona 36: "go", "turn", "put", "throw", "reveal", "keep"
-- Persona 34: "recognize", "arrange", "place", "set", "invite", "threaten"
+Here are the top words for both personas:
 
-Persona 36 seems to be a generic persona without too much obvious structure, though "turn" and "reveal" can indicate a key
-role. Persona 34 is much more interesting. Words like "threaten", "arrange", "place", "set" and "invite" suggest that
+<table>
+<tr>
+<th> Persona 36 </th>
+<th> Persona 34 </th>
+</tr>
+<tr>
+<td>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">agent</th>
+<th style="text-align:left">patient</th>
+<th style="text-align:left">modifiee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">work</td>
+<td style="text-align:left">go</td>
+<td style="text-align:left">lover</td>
+</tr>
+<tr>
+<td style="text-align:left">fail</td>
+<td style="text-align:left">turn</td>
+<td style="text-align:left">dead</td>
+</tr>
+<tr>
+<td style="text-align:left">live</td>
+<td style="text-align:left">put</td>
+<td style="text-align:left">former</td>
+</tr>
+<tr>
+<td style="text-align:left">end</td>
+<td style="text-align:left">throw</td>
+<td style="text-align:left">angry</td>
+</tr>
+<tr>
+<td style="text-align:left">set</td>
+<td style="text-align:left">reveal</td>
+<td style="text-align:left">new</td>
+</tr>
+<tr>
+<td style="text-align:left">get</td>
+<td style="text-align:left">fight</td>
+<td style="text-align:left">worker</td>
+</tr>
+<tr>
+<td style="text-align:left">reach</td>
+<td style="text-align:left">knock</td>
+<td style="text-align:left">terrorist</td>
+</tr>
+<tr>
+<td style="text-align:left">come</td>
+<td style="text-align:left">leave</td>
+<td style="text-align:left">able</td>
+</tr>
+<tr>
+<td style="text-align:left">enter</td>
+<td style="text-align:left">inform</td>
+<td style="text-align:left">black</td>
+</tr>
+<tr>
+<td style="text-align:left">try</td>
+<td style="text-align:left">work</td>
+<td style="text-align:left">partner</td>
+</tr>
+</tbody>
+</table>
+
+
+</td>
+<td>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">agent</th>
+<th style="text-align:left">patient</th>
+<th style="text-align:left">modifiee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">flee</td>
+<td style="text-align:left">work</td>
+<td style="text-align:left">worker</td>
+</tr>
+<tr>
+<td style="text-align:left">plan</td>
+<td style="text-align:left">run</td>
+<td style="text-align:left">terrorist</td>
+</tr>
+<tr>
+<td style="text-align:left">reveal</td>
+<td style="text-align:left">fall</td>
+<td style="text-align:left">able</td>
+</tr>
+<tr>
+<td style="text-align:left">get</td>
+<td style="text-align:left">know</td>
+<td style="text-align:left">black</td>
+</tr>
+<tr>
+<td style="text-align:left">hide</td>
+<td style="text-align:left">live</td>
+<td style="text-align:left">partner</td>
+</tr>
+<tr>
+<td style="text-align:left">impale</td>
+<td style="text-align:left">impale</td>
+<td style="text-align:left">lover</td>
+</tr>
+<tr>
+<td style="text-align:left">force</td>
+<td style="text-align:left">force</td>
+<td style="text-align:left">dead</td>
+</tr>
+<tr>
+<td style="text-align:left">strangle</td>
+<td style="text-align:left">strangle</td>
+<td style="text-align:left">former</td>
+</tr>
+<tr>
+<td style="text-align:left">throw</td>
+<td style="text-align:left">throw</td>
+<td style="text-align:left">angry</td>
+</tr>
+<tr>
+<td style="text-align:left">appear</td>
+<td style="text-align:left">appear</td>
+<td style="text-align:left">new</td>
+</tr>
+</tbody>
+</table>
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+Persona 36 seems to be a generic persona without too much obvious structure, though "fight" and "knock" can indicate a violent
+role. Persona 34 is much more interesting. Words like "plan", "reveal", "impale", "force" and "strangle" suggest that
 this persona captures some sort of manipulative villain which is very fitting for an actor like Christopher Lee!
 
 In this case, we gained a lot of information about the "mystery persona" **because Christopher Lee's roles revolve around
@@ -332,10 +490,9 @@ To decide the best number of character groups, we used a technique called the el
 
 
 The results show that gender doesn't have a consistent or strong impact on how movies are rated across different character groups. Even though we sometimes found notable results, they were not reliable across the board. The low R-squared values from our analysis indicate that gender, as a factor, doesn't play a significant role in determining a movie's average rating. Basically, gender doesn't seem to be a major factor in how well a movie is received by audiences.
-After focusing on gender, we turned our attention to the impact of an actor's height on movie success. We first refined our dataset, removing any entries where the actor's height wasn't available. Using the same clustering technique, we explored how the height of an actor might influence the average ratings of movies within each character group.
 
 
-| Cluster | R-squared | Coeff   | p-value |
+<!-- | Cluster | R-squared | Coeff   | p-value |
 |---------|-----------|---------|---------|
 | 0       | 0.000     | -0.1684 | 0.520   |
 | 1       | 0.000     | 0.0655  | 0.843   |
@@ -348,9 +505,9 @@ After focusing on gender, we turned our attention to the impact of an actor's he
 
 The analysis using OLS regression shows that the height of an actor has virtually no effect on the average movie ratings. The R-squared value of 0.000 tells us that actor height doesn't account for any variation in movie ratings. Furthermore, the coefficient for actor height is almost zero, indicating that even a considerable increase in height (by one meter) doesn't significantly impact a movie's success.
 
-In essence, across all character clusters, an actor's height doesn't affect how well a movie is received. A taller actor does not necessarily lead to higher movie ratings. Thus, the influence of an actor's height on a movie's average rating is minimal to nonexistent.
+In essence, across all character clusters, an actor's height doesn't affect how well a movie is received. A taller actor does not necessarily lead to higher movie ratings. Thus, the influence of an actor's height on a movie's average rating is minimal to nonexistent. -->
 
-To sum up, our findings suggest that neither the gender nor the height of actors significantly affects the average ratings of movies. These physical characteristics of actors don't appear to play a crucial role in the success of a movie.
+To sum up, our findings suggest that neither the gender doesn't significantly affect the average ratings of movies. This characteristic of actors doesn't appear to play a crucial role in the success of a movie.
 
 ### Ethnicity
 
