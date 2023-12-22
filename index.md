@@ -66,7 +66,13 @@ reduce those high dimensional vectors to 2 dimensions and visualize them. Here a
   </div>
 </div>
 
-Personas share many words with each other! They share similar topics but what matters is the combination of them! For instance, look at Persona 14 and 34, both have modifiee "dead". However, Persona 14 "grows", "develops", "invites" and is "reunited", "separated" while Persona 34 "strangles", "impales", "forces" and also gets "impaled", "strangled" in return! For both of those personas, "dead" evoke something different: a tragic love story for Persona 14 and a horror plot for Persona 34... 
+"Agent" words are action that the persona performs. "Patient" words are verbs that this persona experiences. Finally,
+"modifiee" words are attributes.  
+Personas share many words with each other! They share similar topics but what matters is the combination of them! 
+For instance, look at Persona 14 and 34, both have modifiee "dead". However, Persona 14 "grows", "develops", "invites"
+and is "reunited", "separated" while Persona 34 "strangles", "impales", "forces" and also gets "impaled", "strangled"
+in return! For both of those personas, "dead" evoke something different: a tragic love story for Persona 14 and a horror
+plot for Persona 34... 
 
 
 ### Don't worry, we didn't forget about your favourite action movie star
@@ -469,7 +475,7 @@ This search of understanding never truly ends.
 
 ### The effect of genre on a movie's success
 
-To deepen our understanding, we nos focus on predicting a movie's success using some actor features. We started by
+To deepen our understanding, we now focus on predicting a movie's success using some actor features. We started by
 putting movie characters into groups based on their persona, creating clusters of characters with similar personalities.
 Our goal was to see if physical features of actors, like gender, have any effect on how successful their movies are,
 given that they have roughly the same role (same persona).
