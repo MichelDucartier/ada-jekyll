@@ -489,7 +489,7 @@ To decide the best number of character groups, we used a technique called the el
 
 
 
-The results show that gender doesn't have a consistent or strong impact on how movies are rated across different character groups. Even though we sometimes found notable results, they were not reliable across the board. The low R-squared values from our analysis indicate that gender, as a factor, doesn't play a significant role in determining a movie's average rating. Basically, gender doesn't seem to be a major factor in how well a movie is received by audiences.
+The results show that gender doesn't have a consistent or strong impact on how movies are rated across different character groups. Even though we sometimes found notable results, they were not reliable across the board. The low R-squared values from our analysis indicate that gender, as a factor, doesn't play a significant role in determining a movie's average rating. In short, gender doesn't seem to be a major factor in how well a movie is received by audiences.
 
 
 <!-- | Cluster | R-squared | Coeff   | p-value |
@@ -515,37 +515,153 @@ Bob was concerned about whether his ethnic background could influence the types 
 To address his concerns, we conducted an analysis to determine if an actor's ethnic origins have an effect on the variety of characters and identities they are typically cast as.
 We started by cleaning our dataset to exclude actors without listed ethnicities. Then, we grouped actors together, calculating the average of the character tropes they played. We generated a new dataframe for each persona , which showed the ethnic backgrounds of actors and their related persona trope. 
 
-Our OLS analysis yielded intriguing insights into the relationship between ethnicities and personas. For instance, Persona 35 showed no clear dependence on ethnicity. (could not describe the persona in any way ...) 
+To our, two personas stood out as being heavily influenced by actors' ethnicities! Those personas are Persona 4 and Persona 37: 
+<table>
+<tr>
+<th> Persona 4 </th>
+<th> Persona 37 </th>
+</tr>
+<tr>
+<td>
 
-Conversely, the 'Elder Believing, Revealing, Uniting' persona demonstrated a notable association with certain ethnicities, as detailed in the following table.
+<table>
+<thead>
+<tr>
+<th>agent</th>
+<th>patient</th>
+<th>modifiee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arrive</td>
+<td>go</td>
+<td>close</td>
+</tr>
+<tr>
+<td>meet</td>
+<td>turn</td>
+<td>elder</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>put</td>
+<td>orphan</td>
+</tr>
+<tr>
+<td>believe</td>
+<td>throw</td>
+<td>mom</td>
+</tr>
+<tr>
+<td>think</td>
+<td>reveal</td>
+<td>other</td>
+</tr>
+<tr>
+<td>escape</td>
+<td>bring</td>
+<td>lover</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>unite</td>
+<td>dead</td>
+</tr>
+<tr>
+<td>like</td>
+<td>make</td>
+<td>former</td>
+</tr>
+<tr>
+<td>stay</td>
+<td>like</td>
+<td>angry</td>
+</tr>
+<tr>
+<td>help</td>
+<td>impress</td>
+<td>new</td>
+</tr>
+</tbody>
+</table>
 
-| Ethnicity        | Coefficient | p-value |
-|------------------|-------------|---------|
-| Hindu            | 0.4510      | 0.000   |
-| Dogra            | 0.6210      | 0.000   |
-| Mangaloreans     | 0.3921      | 0.001   |
-| Hindkowans       | 0.3548      | 0.002   |
-| Finns            | 0.3644      | 0.000   |
 
-In contrast, the 'Aggressive Villain' persona, often linked with themes of terrorism, murder, stabbing, hitting, and killing, showed a stronger connection to specific ethnic groups, as indicated in the accompanying table.
+</td>
+<td>
 
-| Ethnicity          | Coefficient | p-value |
-|--------------------|-------------|---------|
-| Tamil American     | 0.7882      | <0.001  |
-| Belgians           | 0.7782      | <0.001  |
-| Moroccans          | 0.5482      | <0.001  |
-| Sephardi Jews      | 0.4249      | <0.001  |
-| Afro-Asian         | 0.3932      | <0.001  |
-| Portuguese people  | 0.3882      | <0.001  |
+<table>
+<thead>
+<tr>
+<th>agent</th>
+<th>patient</th>
+<th>modifiee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>escape</td>
+<td>go</td>
+<td>younger</td>
+</tr>
+<tr>
+<td>accept</td>
+<td>turn</td>
+<td>older</td>
+</tr>
+<tr>
+<td>like</td>
+<td>put</td>
+<td>mysterious</td>
+</tr>
+<tr>
+<td>stay</td>
+<td>throw</td>
+<td>blind</td>
+</tr>
+<tr>
+<td>help</td>
+<td>reveal</td>
+<td>only</td>
+</tr>
+<tr>
+<td>work</td>
+<td>try</td>
+<td>lover</td>
+</tr>
+<tr>
+<td>fail</td>
+<td>work</td>
+<td>dead</td>
+</tr>
+<tr>
+<td>live</td>
+<td>wound</td>
+<td>former</td>
+</tr>
+<tr>
+<td>end</td>
+<td>call</td>
+<td>angry</td>
+</tr>
+<tr>
+<td>set</td>
+<td>beat</td>
+<td>new</td>
+</tr>
+</tbody>
+</table>
 
-Furthermore, personas linked with elements of magic, ghosts, evil, and summoning also displayed a higher association with particular ethnic backgrounds.
+</td>
+</tr>
+</table>
 
-| Ethnicity           | Coefficient | p-value |
-|---------------------|-------------|---------|
-| Albanian American   | 0.1924      | <0.001  |
-| Irish Canadian      | 0.1214      | 0.000   |
-| Hong Kong people    | 0.0271      | 0.024   |
-| Dominican American  | 0.0639      | 0.022   |
+Respectively 28% and 15% of the variance on those personas are explained by the ethnicities. What's more? The most impactful ethnicity is the same for both personas! Can you guess which one? Let's have a look at those personas. Both of them seem to be drama-related. Persona 4 seem to have some degree of connection to family drama as "orphan", "mom" and "elder" are common attributes for this trope. This persona is "united" with people, "meets" and "likes" others. Persona 37 is "mysterious" and seems to play a role where age is important as "younger" and "older" are both common attributes for this persona. There is one big movie industry that loves those family-centered stories, melodramas and romance... 
+
+Bollywood! Persona 4 has roughly 19% more proportion among roles played by Indian people and 8% for Persona 37. Moreover, both of those p-values are very close to 0 meaning that this correlation is significant.
+Those correlations with the Indian ethnicities don't necessarily imply causality between the Indian ethnicity and those personas. As most of the Indian people of our dataset play in Bollywood movies, there is a high chance that we actually uncovered tropes of Bollywood scenarios!
+
+And Bob? Well Bob can be assured! Those are the only personas that present a significant correlation with ethnicities. Thus Bob can pretty much play any roles that he likes! 
 
 
 ## Conclusion:
