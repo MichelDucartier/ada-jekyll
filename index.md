@@ -54,15 +54,20 @@ processing pipeline to extract the latent topics of different personas. These la
 most frequent words that occur in them. Then, using Word2Vec and a dimensionality reduction algorithm (t-SNE) allows us to
 reduce those high dimensional vectors to 2 dimensions and visualize them. Here are a couple of character tropes visualized:
 
-<div class="container">
-  <iframe class="responsive-iframe" src="assets/plot/persona_scatter.html"></iframe>
+<div class="row">
+  <div class="container">
+    <iframe class="responsive-iframe" src="assets/plot/persona_scatter_agent.html"></iframe>
+  </div>
+  <div class="container">
+    <iframe class="responsive-iframe" src="assets/plot/persona_scatter_patient.html"></iframe>
+  </div>
+  <div class="container">
+    <iframe class="responsive-iframe" src="assets/plot/persona_scatter_modifiee.html"></iframe>
+  </div>
 </div>
 
-We definitely find our beloved villain with persona 43! Words like "vampire", "witch" and "pirate" are associated to this
-persona. Switching gears, certain personas have a peculiar penchant for verbs rather than the usual character attributes,
-just like our friend Persona 14. Take a moment to appreciate the action-packed spectacle, where verbs like "stab",
-"threaten," "kill," and "kidnap" take center stage. Believe me, crossing paths with Persona 14 is like willingly stepping
-into a party where enemies are the uninvited guests...
+Personas share many words with each other! They share similar topics but what matters is the combination of them! For instance, look at Persona 14 and 34, both have modifiee "dead". However, Persona 14 "grows", "develops", "invites" and is "reunited", "separated" while Persona 34 "strangles", "impales", "forces" and also gets "impaled", "strangled" in return! For both of those personas, "dead" evoke something different: a tragic love story for Persona 14 and a horror plot for Persona 34... 
+
 
 ### Don't worry, we didn't forget about your favourite action movie star
 
